@@ -26,7 +26,7 @@ namespace Euler
             Console.WriteLine("Execution Time: {0:n0} milliseconds", sw.ElapsedMilliseconds);
         }
 
-        private static IProblem InstantiateProblem(string[] args)
+        public static IProblem InstantiateProblem(string[] args)
         {
             if (args.Length == 0)
             {

@@ -40,11 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IProblem.cs" />
+    <Compile Include="Problems\Problem0001.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="IntegerExtensions\" />
-    <Folder Include="Problems\" />
     <Folder Include="Sequences\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
