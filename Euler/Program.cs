@@ -10,6 +10,7 @@ namespace Euler
     {
         static void Main(string[] args)
         {
+            
         }
     }
 }
