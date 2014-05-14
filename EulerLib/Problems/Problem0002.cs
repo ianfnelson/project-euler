@@ -20,7 +20,7 @@ namespace EulerLib.Problems
             return SumEvenFibonacciWithValuesNotExceeding(4000000).ToString();
         }
 
-        public int SumEvenFibonacciWithValuesNotExceeding(int maxValue)
+        public long SumEvenFibonacciWithValuesNotExceeding(int maxValue)
         {
             return new FibonacciNumbers().GenerateToMaximumValue(maxValue)
                                          .Where(x => x%2 == 0)

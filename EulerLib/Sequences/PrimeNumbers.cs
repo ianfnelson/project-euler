@@ -6,9 +6,9 @@ namespace EulerLib.Sequences
 {
     public class PrimeNumbers
     {
-        public IEnumerable<int> Generate()
+        public IEnumerable<long> Generate()
         {
-            HashSet<int> primes = new HashSet<int>(){2};
+            var primes = new HashSet<long>(){2};
 
             yield return 2;
 
@@ -17,9 +17,9 @@ namespace EulerLib.Sequences
             do
             {
                 var upperBound = Math.Sqrt(trialPrime);
-                bool isPrime = true;
+                var isPrime = true;
 
-                foreach(int trialDivisor in primes)
+                foreach(var trialDivisor in primes)
                 {
                     if (trialDivisor>upperBound) break;
 
@@ -41,12 +41,12 @@ namespace EulerLib.Sequences
 
         }
 
-        public IEnumerable<int> GenerateToMaximumValue(int maximumValue)
+        public IEnumerable<long> GenerateToMaximumValue(long maximumValue)
         {
             return Generate().TakeWhile(value => value <= maximumValue);
         }
 
-        public IEnumerable<int> GenerateToMaximumSize(int maximumSize)
+        public IEnumerable<long> GenerateToMaximumSize(long maximumSize)
         {
             var x = 0;
 

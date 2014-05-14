@@ -6,9 +6,9 @@ namespace EulerLib.Sequences
 {
     public abstract class NaiveSequenceGeneratorBase : SequenceGeneratorBase
     {
-        public abstract bool IntegerIsMemberOfSequence(int n);
+        public abstract bool IntegerIsMemberOfSequence(long n);
 
-        public override IEnumerable<int> Generate()
+        public override IEnumerable<long> Generate()
         {
             var n = 1;
 

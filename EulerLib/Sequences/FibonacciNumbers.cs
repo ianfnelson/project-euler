@@ -4,7 +4,7 @@ namespace EulerLib.Sequences
 {
     public class FibonacciNumbers : SequenceGeneratorBase
     {
-        public override IEnumerable<int> Generate()
+        public override IEnumerable<long> Generate()
         {
             var a = 0;
             var b = 1;

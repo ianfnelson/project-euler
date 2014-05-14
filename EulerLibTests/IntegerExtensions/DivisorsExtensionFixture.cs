@@ -18,7 +18,7 @@ namespace EulerLibTests.IntegerExtensions
             // Arrange
 
             // Act
-            var divisors = n.GetDivisors();
+            var divisors = n.Divisors();
 
             // Assert
             Assert.That(divisors.Count(), Is.EqualTo(divisorsCount));
@@ -36,7 +36,7 @@ namespace EulerLibTests.IntegerExtensions
             // Arrange
 
             // Act
-            var divisors = n.GetProperDivisors();
+            var divisors = n.ProperDivisors();
 
             // Assert
             Assert.That(divisors.Count(), Is.EqualTo(divisorsCount));

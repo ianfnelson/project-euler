@@ -6,12 +6,22 @@ namespace EulerLib.IntegerExtensions
 {
     public static class DivisorsExtension
     {
-        public static IEnumerable<int> GetProperDivisors(this int n)
+        public static IEnumerable<long> ProperDivisors(this int n)
         {
-            return GetDivisors(n).Where(x => x != n);
+            return ProperDivisors((long) n);
         }
 
-        public static IEnumerable<int> GetDivisors(this int n)
+        public static IEnumerable<long> ProperDivisors(this long n)
+        {
+            return Divisors(n).Where(x => x != n);
+        }
+
+        public static IEnumerable<long> Divisors(this int n)
+        {
+            return Divisors((long)n);
+        }
+
+        public static IEnumerable<long> Divisors(this long n)
         {
             var upperBound = Math.Sqrt(n);
 
