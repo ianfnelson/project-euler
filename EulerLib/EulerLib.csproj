@@ -39,14 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IntegerExtensions\DivisorsExtension.cs" />
+    <Compile Include="IntegerExtensions\SequenceMembershipExtensions.cs" />
     <Compile Include="IProblem.cs" />
     <Compile Include="Problems\Problem0001.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sequences\AbundantNumbers.cs" />
+    <Compile Include="Sequences\DeficientNumbers.cs" />
+    <Compile Include="Sequences\ISequenceGenerator.cs" />
+    <Compile Include="Sequences\NaiveSequenceGeneratorBase.cs" />
+    <Compile Include="Sequences\PerfectNumbers.cs" />
+    <Compile Include="Sequences\PrimeNumbers.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="IntegerExtensions\" />
-    <Folder Include="Sequences\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
