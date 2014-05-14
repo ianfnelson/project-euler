@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using EulerLib.Sequences;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace EulerLibTests.Sequences
@@ -15,9 +16,18 @@ namespace EulerLibTests.Sequences
         [TestCase(4, 30)]
         public void AbundantsTestCases(int index, int value)
         {
-            var sequence = new AbundantNumbers().GenerateToMaximumSize(5);
+            var sequence = new AbundantNumbers().GenerateToMaximumSize(index+1).ToList();
 
-            Assert.That(sequence.ElementAt(index), Is.EqualTo(value));
+            Assert.That(sequence.Count, Is.EqualTo(index+1));
+            Assert.That(sequence[index], Is.EqualTo(value));
+        }
+
+        [Test]
+        public void AbundantsTestCases_UsingGenerateToMaximumValue()
+        {
+            var sequence = new AbundantNumbers().GenerateToMaximumValue(30);
+
+            sequence.ShouldAllBeEquivalentTo(new []{12,18,20,24,30});
         }
     }
 }
