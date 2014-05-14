@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="IntegerExtensions\DivisorsExtensionFixture.cs" />
     <Compile Include="IntegerExtensions\SequenceMembershipExtensionsFixture.cs" />
+    <Compile Include="Problems\Problem0001Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequences\AbundantNumbersFixture.cs" />
     <Compile Include="Sequences\DeficientNumbersFixture.cs" />
@@ -65,6 +66,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

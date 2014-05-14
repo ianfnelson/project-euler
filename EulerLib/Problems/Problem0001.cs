@@ -1,4 +1,6 @@
-﻿namespace EulerLib.Problems
+﻿using System.Linq;
+
+namespace EulerLib.Problems
 {
     public class Problem0001 : IProblem
     {
@@ -8,7 +10,14 @@
 
         public string Solve()
         {
-            return "123";
+            return SumMultiplesOfThreeAndFiveBelow(1000).ToString();
+        }
+
+        public int SumMultiplesOfThreeAndFiveBelow(int ceiling)
+        {
+            return Enumerable.Range(1,ceiling-1)
+                .Where(x => x % 3 == 0 || x % 5 == 0)
+                .Sum();
         }
     }
 }
