@@ -43,13 +43,16 @@
     <Compile Include="IntegerExtensions\SequenceMembershipExtensions.cs" />
     <Compile Include="IProblem.cs" />
     <Compile Include="Problems\Problem0001.cs" />
+    <Compile Include="Problems\Problem0002.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequences\AbundantNumbers.cs" />
     <Compile Include="Sequences\DeficientNumbers.cs" />
+    <Compile Include="Sequences\FibonacciNumbers.cs" />
     <Compile Include="Sequences\ISequenceGenerator.cs" />
     <Compile Include="Sequences\NaiveSequenceGeneratorBase.cs" />
     <Compile Include="Sequences\PerfectNumbers.cs" />
     <Compile Include="Sequences\PrimeNumbers.cs" />
+    <Compile Include="Sequences\SequenceGeneratorBase.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

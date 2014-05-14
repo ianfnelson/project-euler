@@ -51,9 +51,11 @@
     <Compile Include="IntegerExtensions\DivisorsExtensionFixture.cs" />
     <Compile Include="IntegerExtensions\SequenceMembershipExtensionsFixture.cs" />
     <Compile Include="Problems\Problem0001Fixture.cs" />
+    <Compile Include="Problems\Problem0002Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequences\AbundantNumbersFixture.cs" />
     <Compile Include="Sequences\DeficientNumbersFixture.cs" />
+    <Compile Include="Sequences\FibonacciNumbersFixture.cs" />
     <Compile Include="Sequences\PerfectNumberFixture.cs" />
     <Compile Include="Sequences\PrimeNumbersFixture.cs" />
   </ItemGroup>
