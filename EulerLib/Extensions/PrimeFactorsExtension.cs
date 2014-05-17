@@ -12,6 +12,8 @@ namespace EulerLib.Extensions
 
         public static IEnumerable<long> PrimeFactors(this long n)
         {
+            if (n == 1) yield break;
+
             foreach (var prime in new PrimeNumbers().Generate())
             {
                 if (n % prime == 0)

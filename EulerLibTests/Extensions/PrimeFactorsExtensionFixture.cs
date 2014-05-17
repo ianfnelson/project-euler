@@ -9,6 +9,14 @@ namespace EulerLibTests.Extensions
     public class PrimeFactorsExtensionFixture
     {
         [Test]
+        public void PrimeFactorsOf1()
+        {
+            var sequence = 1.PrimeFactors().ToList();
+
+            sequence.Should().BeEmpty();
+        }
+
+        [Test]
         public void PrimeFactorsOf12()
         {
             var sequence = 12.PrimeFactors().ToList();
