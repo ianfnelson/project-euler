@@ -57,6 +57,7 @@
     <Compile Include="Problems\Problem0003Fixture.cs" />
     <Compile Include="Problems\Problem0004Fixture.cs" />
     <Compile Include="Problems\Problem0005Fixture.cs" />
+    <Compile Include="Problems\Problem0006Fixture.cs" />
     <Compile Include="Problems\Problem0007Fixture.cs" />
     <Compile Include="Problems\Problem0010Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

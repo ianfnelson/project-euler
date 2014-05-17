@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
@@ -10,9 +11,16 @@ namespace Euler
     {
         private static void Main(string[] args)
         {
-            var problem = InstantiateProblem(args);
-            if (problem == null) return;
+            var problems = GetProblems(args);
 
+            foreach (var problem in problems)
+            {
+                Solve(problem);
+            }
+        }
+
+        private static void Solve(IProblem problem)
+        {
             Console.WriteLine("Solving problem ID {0} - {1}", problem.Id, problem.Title);
 
             var sw = new Stopwatch();
@@ -24,14 +32,21 @@ namespace Euler
 
             Console.WriteLine("Answer: {0}", solution);
             Console.WriteLine("Execution Time: {0:n0} milliseconds", sw.ElapsedMilliseconds);
+            Console.WriteLine("");
         }
 
-        public static IProblem InstantiateProblem(string[] args)
+        public static IEnumerable<IProblem> GetProblems(string[] args)
         {
+            var problemType = typeof (IProblem);
+
             if (args.Length == 0)
             {
-                Console.WriteLine("Please pass the integer ID of the problem to be solved");
-                return null;
+                return Assembly.GetAssembly(problemType)
+                    .GetTypes()
+                    .Where(problemType.IsAssignableFrom)
+                    .Where(t => t.IsClass)
+                    .OrderBy(x => x.Name)
+                    .Select(x => (IProblem) Activator.CreateInstance(x));
             }
 
             int problemId;
@@ -54,7 +69,7 @@ namespace Euler
 
             try
             {
-                var type = Assembly.GetAssembly(typeof (IProblem))
+                var type = Assembly.GetAssembly(problemType)
                     .GetTypes()
                     .Single(x => x.Name.Equals(typeName));
 
@@ -66,7 +81,7 @@ namespace Euler
                 return null;
             }
 
-            return problem;
+            return new []{problem};
         }
     }
 }
