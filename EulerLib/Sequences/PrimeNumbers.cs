@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace EulerLib.Sequences
 {
@@ -8,7 +7,7 @@ namespace EulerLib.Sequences
     {
         public override IEnumerable<long> Generate()
         {
-            var primes = new HashSet<long>(){2};
+            var primes = new HashSet<long> {2};
 
             yield return 2;
 
@@ -19,9 +18,9 @@ namespace EulerLib.Sequences
                 var upperBound = Math.Sqrt(trialPrime);
                 var isPrime = true;
 
-                foreach(var trialDivisor in primes)
+                foreach (var trialDivisor in primes)
                 {
-                    if (trialDivisor>upperBound) break;
+                    if (trialDivisor > upperBound) break;
 
                     if (trialPrime % trialDivisor == 0)
                     {
@@ -36,7 +35,7 @@ namespace EulerLib.Sequences
                     yield return trialPrime;
                 }
 
-                trialPrime+= 2;
+                trialPrime += 2;
             } while (true);
         }
     }

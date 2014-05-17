@@ -6,9 +6,9 @@ using EulerLib;
 
 namespace Euler
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var problem = InstantiateProblem(args);
             if (problem == null) return;
@@ -37,13 +37,15 @@ namespace Euler
             int problemId;
             if (!int.TryParse(args[0], out problemId))
             {
-                Console.WriteLine("'{0}' is not a valid integer. Please pass the integer ID of the problem to be solved", args[0]);
+                Console.WriteLine(
+                    "'{0}' is not a valid integer. Please pass the integer ID of the problem to be solved", args[0]);
                 return null;
             }
 
             if (problemId < 1 || problemId > 9999)
             {
-                Console.WriteLine("'{0}' is out of range. Please pass the integer ID of the problem to be solved", args[0]);
+                Console.WriteLine("'{0}' is out of range. Please pass the integer ID of the problem to be solved",
+                    args[0]);
                 return null;
             }
 
@@ -52,11 +54,11 @@ namespace Euler
 
             try
             {
-                var type = Assembly.GetAssembly(typeof(IProblem))
-                                   .GetTypes()
-                                   .Single(x => x.Name.Equals(typeName));
+                var type = Assembly.GetAssembly(typeof (IProblem))
+                    .GetTypes()
+                    .Single(x => x.Name.Equals(typeName));
 
-                problem = (IProblem)Activator.CreateInstance(type);
+                problem = (IProblem) Activator.CreateInstance(type);
             }
             catch (Exception ex)
             {

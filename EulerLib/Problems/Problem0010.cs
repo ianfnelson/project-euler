@@ -5,8 +5,15 @@ namespace EulerLib.Problems
 {
     public class Problem0010 : IProblem
     {
-        public int Id { get { return 10; } }
-        public string Title { get { return "Summation of Primes"; } }
+        public int Id
+        {
+            get { return 10; }
+        }
+
+        public string Title
+        {
+            get { return "Summation of Primes"; }
+        }
 
         public string Solve()
         {

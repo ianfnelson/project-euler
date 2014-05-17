@@ -18,7 +18,7 @@ namespace EulerLib.IntegerExtensions
 
         public static IEnumerable<long> Divisors(this int n)
         {
-            return Divisors((long)n);
+            return Divisors((long) n);
         }
 
         public static IEnumerable<long> Divisors(this long n)

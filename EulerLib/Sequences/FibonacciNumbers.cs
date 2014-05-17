@@ -16,7 +16,6 @@ namespace EulerLib.Sequences
                 b = result;
 
                 yield return result;
-
             } while (true);
         }
     }

@@ -1,5 +1,4 @@
-﻿using System;
-using EulerLib.IntegerExtensions;
+﻿using EulerLib.IntegerExtensions;
 
 namespace EulerLib.Sequences
 {

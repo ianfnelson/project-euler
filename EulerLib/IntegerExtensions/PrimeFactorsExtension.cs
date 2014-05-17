@@ -7,7 +7,7 @@ namespace EulerLib.IntegerExtensions
     {
         public static IEnumerable<long> PrimeFactors(this int n)
         {
-            return PrimeFactors((long)n);
+            return PrimeFactors((long) n);
         }
 
         public static IEnumerable<long> PrimeFactors(this long n)

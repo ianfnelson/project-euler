@@ -23,8 +23,8 @@ namespace EulerLib.Problems
         public long SumEvenFibonacciWithValuesNotExceeding(int maxValue)
         {
             return new FibonacciNumbers().GenerateToMaximumValue(maxValue)
-                                         .Where(x => x%2 == 0)
-                                         .Sum();
+                .Where(x => x % 2 == 0)
+                .Sum();
         }
     }
 }

@@ -31,7 +31,7 @@ namespace EulerLib.Sequences
 
         public IEnumerable<long> GenerateToMaximumSize(int maximumSize)
         {
-            return GenerateToMaximumSize((long)maximumSize);
+            return GenerateToMaximumSize((long) maximumSize);
         }
     }
 }
