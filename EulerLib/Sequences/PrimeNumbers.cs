@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace EulerLib.Sequences
 {
-    public class PrimeNumbers
+    public class PrimeNumbers : SequenceGeneratorBase
     {
-        public IEnumerable<long> Generate()
+        public override IEnumerable<long> Generate()
         {
             var primes = new HashSet<long>(){2};
 
@@ -38,24 +38,6 @@ namespace EulerLib.Sequences
 
                 trialPrime+= 2;
             } while (true);
-
-        }
-
-        public IEnumerable<long> GenerateToMaximumValue(long maximumValue)
-        {
-            return Generate().TakeWhile(value => value <= maximumValue);
-        }
-
-        public IEnumerable<long> GenerateToMaximumSize(long maximumSize)
-        {
-            var x = 0;
-
-            foreach (var value in Generate())
-            {
-                x++;
-                if (x > maximumSize) break;
-                yield return value;
-            }
         }
     }
 }
