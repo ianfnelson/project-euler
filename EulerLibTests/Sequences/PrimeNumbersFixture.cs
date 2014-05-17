@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using EulerLib.Sequences;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace EulerLibTests.Sequences
@@ -41,6 +42,22 @@ namespace EulerLibTests.Sequences
             var sequence = new PrimeNumbers().GenerateToMaximumSize(maximumSize).ToList();
 
             Assert.That(sequence.Last(), Is.EqualTo(lastPrime));
+        }
+
+        [Test]
+        public void GenerateUsingEratosthenesSieveTest1()
+        {
+            var sequence = new PrimeNumbers().GenerateUsingEratosthenesSieve(20).ToList();
+
+            sequence.ShouldAllBeEquivalentTo(new[] { 2, 3, 5, 7, 11, 13, 17, 19 });
+        }
+
+        [Test]
+        public void GenerateUsingEratosthenesSieveTest2()
+        {
+            var sequence = new PrimeNumbers().GenerateUsingEratosthenesSieve(30).ToList();
+
+            sequence.ShouldAllBeEquivalentTo(new[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 });
         }
     }
 }

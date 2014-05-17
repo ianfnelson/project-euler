@@ -33,7 +33,7 @@ namespace EulerLib.Extensions
                 }
 
                 yield return candidate;
-                if (candidate != upperBound)
+                if (Math.Abs(candidate - upperBound) > 0.1D)
                 {
                     yield return n / candidate;
                 }

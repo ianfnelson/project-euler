@@ -22,7 +22,7 @@ namespace EulerLib.Problems
 
         public long SumOfPrimesBelow(int ceiling)
         {
-            return new PrimeNumbers().GenerateToMaximumValue(ceiling - 1).Sum();
+            return new PrimeNumbers().GenerateUsingEratosthenesSieve(ceiling - 1).Sum();
         }
     }
 }
