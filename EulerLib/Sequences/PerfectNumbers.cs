@@ -1,4 +1,4 @@
-﻿using EulerLib.IntegerExtensions;
+﻿using EulerLib.Extensions;
 
 namespace EulerLib.Sequences
 {

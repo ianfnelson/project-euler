@@ -1,8 +1,8 @@
-﻿using System;
-using EulerLib.IntegerExtensions;
+﻿using EulerLib.Extensions;
+using FluentAssertions;
 using NUnit.Framework;
 
-namespace EulerLibTests.IntegerExtensions
+namespace EulerLibTests.Extensions
 {
     [TestFixture]
     public class SequenceMembershipExtensionsFixture
@@ -64,6 +64,23 @@ namespace EulerLibTests.IntegerExtensions
         {
             // AAA
             Assert.That(n.IsPrime(), Is.EqualTo(isPrime));
+        }
+
+        [TestCase(1, true)]
+        [TestCase(2, true)]
+        [TestCase(3, true)]
+        [TestCase(10, false)]
+        [TestCase(11, true)]
+        [TestCase(44, true)]
+        [TestCase(46, false)]
+        [TestCase(101, true)]
+        [TestCase(151, true)]
+        [TestCase(186, false)]
+        [TestCase(1016101, true)]
+        [TestCase(10178663, false)]
+        public void IsPalindromicTestCases(int n, bool isPalindromic)
+        {
+            n.IsPalindromic().Should().Be(isPalindromic);
         }
     }
 }

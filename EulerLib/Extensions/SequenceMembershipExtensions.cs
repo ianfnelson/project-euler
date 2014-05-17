@@ -1,6 +1,7 @@
-﻿using System.Linq;
+﻿using System.Globalization;
+using System.Linq;
 
-namespace EulerLib.IntegerExtensions
+namespace EulerLib.Extensions
 {
     public static class SequenceMembershipExtensions
     {
@@ -42,6 +43,18 @@ namespace EulerLib.IntegerExtensions
         public static bool IsPrime(this long n)
         {
             return n > 1 && n.Divisors().All(x => (x == n) || (x == 1));
+        }
+
+        public static bool IsPalindromic(this int n)
+        {
+            return IsPalindromic((long) n);
+        }
+
+        public static bool IsPalindromic(this long n)
+        {
+            var stringyN = n.ToString(CultureInfo.InvariantCulture);
+
+            return stringyN.Equals(stringyN.ReverseString());
         }
     }
 }

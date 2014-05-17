@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using EulerLib.IntegerExtensions;
+using EulerLib.Extensions;
 using NUnit.Framework;
 
-namespace EulerLibTests.IntegerExtensions
+namespace EulerLibTests.Extensions
 {
     [TestFixture]
     public class DivisorsExtensionFixture
@@ -13,7 +13,7 @@ namespace EulerLibTests.IntegerExtensions
         [TestCase(16, 31, 5)]
         [TestCase(220, 504, 12)]
         [TestCase(284, 504, 6)]
-        public void GetDivisorsTests(int n, int divisorsSum, int divisorsCount)
+        public void DivisorsTests(int n, int divisorsSum, int divisorsCount)
         {
             // Arrange
 
@@ -31,7 +31,7 @@ namespace EulerLibTests.IntegerExtensions
         [TestCase(16, 15, 4)]
         [TestCase(220, 284, 11)]
         [TestCase(284, 220, 5)]
-        public void GetProperDivisorsTests(int n, int divisorsSum, int divisorsCount)
+        public void ProperDivisorsTests(int n, int divisorsSum, int divisorsCount)
         {
             // Arrange
 

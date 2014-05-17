@@ -48,12 +48,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IntegerExtensions\DivisorsExtensionFixture.cs" />
-    <Compile Include="IntegerExtensions\PrimeFactorsExtensionFixture.cs" />
-    <Compile Include="IntegerExtensions\SequenceMembershipExtensionsFixture.cs" />
+    <Compile Include="Extensions\DivisorsExtensionFixture.cs" />
+    <Compile Include="Extensions\PrimeFactorsExtensionFixture.cs" />
+    <Compile Include="Extensions\SequenceMembershipExtensionsFixture.cs" />
+    <Compile Include="Extensions\StringExtensionsFixture.cs" />
     <Compile Include="Problems\Problem0001Fixture.cs" />
     <Compile Include="Problems\Problem0002Fixture.cs" />
     <Compile Include="Problems\Problem0003Fixture.cs" />
+    <Compile Include="Problems\Problem0004Fixture.cs" />
     <Compile Include="Problems\Problem0007Fixture.cs" />
     <Compile Include="Problems\Problem0010Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

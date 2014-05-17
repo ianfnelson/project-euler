@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EulerLib.IntegerExtensions
+namespace EulerLib.Extensions
 {
     public static class DivisorsExtension
     {

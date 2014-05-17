@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using EulerLib.Sequences;
 
-namespace EulerLib.IntegerExtensions
+namespace EulerLib.Extensions
 {
     public static class PrimeFactorsExtension
     {

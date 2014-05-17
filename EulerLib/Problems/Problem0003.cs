@@ -1,5 +1,5 @@
 ﻿using System.Linq;
-using EulerLib.IntegerExtensions;
+using EulerLib.Extensions;
 
 namespace EulerLib.Problems
 {
