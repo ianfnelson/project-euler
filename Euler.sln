@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerLib", "EulerLib\EulerL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerLibTests", "EulerLibTests\EulerLibTests.csproj", "{B4396E79-5B9B-4F09-AAD5-E5EFD5B85D39}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EulerLibFSharp", "EulerLibFSharp\EulerLibFSharp.fsproj", "{B52FBD79-C083-46C7-9154-3C3CB61CD450}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{B4396E79-5B9B-4F09-AAD5-E5EFD5B85D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4396E79-5B9B-4F09-AAD5-E5EFD5B85D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4396E79-5B9B-4F09-AAD5-E5EFD5B85D39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B52FBD79-C083-46C7-9154-3C3CB61CD450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B52FBD79-C083-46C7-9154-3C3CB61CD450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B52FBD79-C083-46C7-9154-3C3CB61CD450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B52FBD79-C083-46C7-9154-3C3CB61CD450}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
