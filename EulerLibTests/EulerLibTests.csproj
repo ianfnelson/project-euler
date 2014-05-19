@@ -39,6 +39,9 @@
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
+    <Reference Include="Ploeh.AutoFixture">
+      <HintPath>..\packages\AutoFixture.3.18.7\lib\net40\Ploeh.AutoFixture.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +56,7 @@
     <Compile Include="Extensions\SequenceMembershipExtensionsFixture.cs" />
     <Compile Include="Extensions\StringExtensionsFixture.cs" />
     <Compile Include="Poker\CardFixture.cs" />
+    <Compile Include="Poker\HandFixture.cs" />
     <Compile Include="Problems\Problem0001Fixture.cs" />
     <Compile Include="Problems\Problem0002Fixture.cs" />
     <Compile Include="Problems\Problem0003Fixture.cs" />
