@@ -44,6 +44,11 @@
     <Compile Include="Extensions\SequenceMembershipExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="IProblem.cs" />
+    <Compile Include="Poker\Card.cs" />
+    <Compile Include="Poker\Hand.cs" />
+    <Compile Include="Poker\Ranking.cs" />
+    <Compile Include="Poker\Suit.cs" />
+    <Compile Include="Poker\Value.cs" />
     <Compile Include="Problems\Problem0001.cs" />
     <Compile Include="Problems\Problem0002.cs" />
     <Compile Include="Problems\Problem0003.cs" />

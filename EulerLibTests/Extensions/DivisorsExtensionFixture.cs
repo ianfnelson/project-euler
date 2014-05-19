@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using EulerLib.Extensions;
+using FluentAssertions;
 using NUnit.Framework;
 
 namespace EulerLibTests.Extensions
@@ -41,6 +42,14 @@ namespace EulerLibTests.Extensions
             // Assert
             Assert.That(divisors.Count(), Is.EqualTo(divisorsCount));
             Assert.That(divisors.Sum(), Is.EqualTo(divisorsSum));
+        }
+
+        [TestCase(4, new[] { 1, 2 })]
+        public void Foo(int n, int[] expectedDivisors)
+        {
+            var divisors = n.ProperDivisors();
+
+            divisors.ShouldAllBeEquivalentTo(expectedDivisors);
         }
     }
 }

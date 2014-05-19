@@ -52,6 +52,7 @@
     <Compile Include="Extensions\PrimeFactorsExtensionFixture.cs" />
     <Compile Include="Extensions\SequenceMembershipExtensionsFixture.cs" />
     <Compile Include="Extensions\StringExtensionsFixture.cs" />
+    <Compile Include="Poker\CardFixture.cs" />
     <Compile Include="Problems\Problem0001Fixture.cs" />
     <Compile Include="Problems\Problem0002Fixture.cs" />
     <Compile Include="Problems\Problem0003Fixture.cs" />
