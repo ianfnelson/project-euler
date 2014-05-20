@@ -105,31 +105,32 @@ namespace EulerLib.Poker
                         break;
                 }
             }
+
+            ValuesList = grouping.Select(g => g.Key).ToList();
         }
 
         private void InterpretWhereAllValuesDiffer()
         {
             var isFlush = Cards.Select(c => c.Suit).Distinct().Count() == 1;
-            var orderedCards = Cards.OrderBy(c => c.Value).ToList();
+            var orderedCards = Cards.OrderByDescending(c => c.Value).ToList();
 
-            var isStraight = (orderedCards[3].Value == Value.Five && orderedCards[4].Value == Value.Ace) ||
-                             ((int) orderedCards[4].Value - (int) orderedCards[0].Value == 4);
+            var isNormalStraight = ((int) orderedCards[0].Value - (int) orderedCards[4].Value == 4);
+            var isLowAceStraight = (orderedCards[1].Value == Value.Five && orderedCards[0].Value == Value.Ace);
 
-            if (isFlush && isStraight)
+            if (isNormalStraight || isLowAceStraight)
             {
-                Ranking = Ranking.StraightFlush;
-            }
-            else if (isStraight)
-            {
-                Ranking = Ranking.Straight;
+                Ranking = isFlush ? Ranking.StraightFlush : Ranking.Straight;
+                ValuesList = new List<Value> { isNormalStraight ? orderedCards[0].Value : Value.Five };
             }
             else if (isFlush)
             {
                 Ranking = Ranking.Flush;
+                ValuesList = orderedCards.Select(x => x.Value).ToList();
             }
             else
             {
                 Ranking = Ranking.HighCard;
+                ValuesList = orderedCards.Select(x => x.Value).ToList();
             }
         }
 
