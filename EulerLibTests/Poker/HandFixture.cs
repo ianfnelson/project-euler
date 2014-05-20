@@ -247,6 +247,89 @@ namespace EulerLibTests.Poker
             DoHandComparison(handInput, otherHandInput, expectedResult);
         }
 
+        [TestCase("2C KC 7C 8C 5C", "2H QH 7H 8H 5H", 1)]
+        [TestCase("2C QC 7C 8C 5C", "2H KH 7H 8H 5H", -1)]
+        [TestCase("2C QC 7C 9C 5C", "2H QH 7H 8H 5H", 1)]
+        [TestCase("2C QC 7C 8C 5C", "2H QH 7H 9H 5H", -1)]
+        [TestCase("2C QC 8C 9C 5C", "2H QH 7H 9H 5H", 1)]
+        [TestCase("2S QS 7S 9S 5S", "2D QD 8D 9D 5D", -1)]
+        [TestCase("2S QS 8S 9S 6S", "2D QD 8D 9D 5D", 1)]
+        [TestCase("2S QS 8S 9S 5S", "2D QD 8D 9D 6D", -1)]
+        [TestCase("3S QS 8S 9S 6S", "2D QD 8D 9D 6D", 1)]
+        [TestCase("2S QS 8S 9S 6S", "3D QD 8D 9D 6D", -1)]
+        [TestCase("2S QS 8S 9S 6S", "2D QD 8D 9D 6D", 0)]
+        public void IntraRankComparisons_Flush(string handInput, string otherHandInput, int expectedResult)
+        {
+            DoHandComparison(handInput, otherHandInput, expectedResult);
+        }
+
+        [TestCase("4D 6S 9H QH QC", "4H 6C 9S JS JD", 1)]
+        [TestCase("4H 6C 9S JS JD", "4D 6S 9H QH QC", -1)]
+        [TestCase("4D 6S 9H QH QC", "4H 6C 8S QS QD", 1)]
+        [TestCase("4H 6C 8S QS QD", "4D 6S 9H QH QC", -1)]
+        [TestCase("4D 6S 9H QH QC", "4H 5C 9S QS QD", 1)]
+        [TestCase("4H 5C 9S QS QD", "4D 6S 9H QH QC", -1)]
+        [TestCase("4D 6S 9H QH QC", "3H 6C 9S QS QD", 1)]
+        [TestCase("3H 6C 9S QS QD", "4D 6S 9H QH QC", -1)]
+        [TestCase("4D 6S 9H QH QC", "4H 6C 9S QS QD", 0)]
+        public void IntraRankComparisons_Pair(string handInput, string otherHandInput, int expectedResult)
+        {
+            DoHandComparison(handInput, otherHandInput, expectedResult);
+        }
+
+        [TestCase("9D 6S 9H QH QC", "9C 6H 9S JS JD", 1)]
+        [TestCase("9C 6H 9S JS JD", "9D 6S 9H QH QC", -1)]
+        [TestCase("9D 6S 9H QH QC", "8C 6H 8S QS QD", 1)]
+        [TestCase("8C 6H 8S QS QD", "9D 6S 9H QH QC", -1)]
+        [TestCase("9D 6S 9H QH QC", "9C 5H 9S QS QD", 1)]
+        [TestCase("9C 5H 9S QS QD", "9D 6S 9H QH QC", -1)]
+        [TestCase("9D 6S 9H QH QC", "9C 6H 9S QS QD", 0)]
+        public void IntraRankComparisons_TwoPair(string handInput, string otherHandInput, int expectedResult)
+        {
+            DoHandComparison(handInput, otherHandInput, expectedResult);
+        }
+
+        [TestCase("3D 9C 3H 8S 3S", "2C 9H 2H 8C 2S", 1)]
+        [TestCase("2C 9H 2H 8C 2H", "3D 9C 3H 8S 3S", -1)]
+        public void IntraRankComparisons_ThreeOfAKind(string handInput, string otherHandInput, int expectedResult)
+        {
+            DoHandComparison(handInput, otherHandInput, expectedResult);
+        }
+
+        [TestCase("3D 9C 3H 3S 3C", "2C 9H 2H 2D 2S", 1)]
+        [TestCase("2C 9H 2H 2D 2S", "3D 9C 3H 3S 3C", -1)]
+        public void IntraRankComparisons_FullHouse(string handInput, string otherHandInput, int expectedResult)
+        {
+            DoHandComparison(handInput, otherHandInput, expectedResult);
+        }
+
+        [TestCase("3D 3C 3H 8S 3S", "2C 2H 2H 8C 2H", 1)]
+        [TestCase("2C 2H 2H 8C 2H", "3D 3C 3H 8S 3S", -1)]
+        public void IntraRankComparisons_FourOfAKind(string handInput, string otherHandInput, int expectedResult)
+        {
+            DoHandComparison(handInput, otherHandInput, expectedResult);
+        }
+
+        [TestCase("TC JS QH KD AC", "9D TH JC QS KH", 1)]
+        [TestCase("9D TH JC QS KH", "TC JS QH KD AC", -1)]
+        [TestCase("2C 3S 4H 5D 6C", "AD 2H 3C 4S 5H", 1)]
+        [TestCase("AD 2H 3C 4S 5D", "2C 3S 4H 5D 6C", -1)]
+        [TestCase("7D 8H 9C TS JD", "7C 8S 9H TD JC", 0)]
+        public void IntraRankComparisons_Straight(string handInput, string otherHandInput, int expectedResult)
+        {
+            DoHandComparison(handInput, otherHandInput, expectedResult);
+        }
+
+        [TestCase("TC JC QC KC AC", "9H TH JH QH KH", 1)]
+        [TestCase("9C TC JC QC KC", "TS JS QS KS AS", -1)]
+        [TestCase("2S 3S 4S 5S 6S", "AD 2D 3D 4D 5D", 1)]
+        [TestCase("AD 2D 3D 4D 5D", "2C 3C 4C 5C 6C", -1)]
+        [TestCase("7H 8H 9H TH JH", "7C 8C 9C TC JC", 0)]
+        public void IntraRankComparisons_StraightFlush(string handInput, string otherHandInput, int expectedResult)
+        {
+            DoHandComparison(handInput, otherHandInput, expectedResult);
+        }
+
         private static void DoHandComparison(string handInput, string otherHandInput, int expectedResult)
         {
             var hand = Hand.Parse(handInput);

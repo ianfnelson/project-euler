@@ -73,13 +73,14 @@ namespace EulerLib.Poker
         private void InterpretWhereSomeValuesMatch()
         {
             var grouping = Cards.GroupBy(c => c.Value)
-                .OrderByDescending(g => g.Count())
-                .ThenByDescending(g => g.Key)
-                .ToList();
+                                .OrderByDescending(g => g.Count())
+                                .ThenByDescending(g => g.Key)
+                                .ToList();
 
             if (grouping.Count == 4)
             {
                 Ranking = Ranking.Pair;
+                ValuesList = grouping.Select(g => g.Key).ToList();
             }
             else if (grouping.Count == 3)
             {
@@ -87,9 +88,11 @@ namespace EulerLib.Poker
                 {
                     case 1:
                         Ranking = Ranking.ThreeOfAKind;
+                        ValuesList = new List<Value> { grouping.First().Key };
                         break;
                     case 2:
                         Ranking = Ranking.TwoPair;
+                        ValuesList = grouping.Select(g => g.Key).ToList();
                         break;
                 }
             }
@@ -104,9 +107,8 @@ namespace EulerLib.Poker
                         Ranking = Ranking.FullHouse;
                         break;
                 }
+                ValuesList = new List<Value> { grouping.First().Key };
             }
-
-            ValuesList = grouping.Select(g => g.Key).ToList();
         }
 
         private void InterpretWhereAllValuesDiffer()

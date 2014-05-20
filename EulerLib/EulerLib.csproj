@@ -59,6 +59,7 @@
     <Compile Include="Problems\Problem0008.cs" />
     <Compile Include="Problems\Problem0009.cs" />
     <Compile Include="Problems\Problem0010.cs" />
+    <Compile Include="Problems\Problem0054.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequences\AbundantNumbers.cs" />
     <Compile Include="Sequences\DeficientNumbers.cs" />
@@ -70,6 +71,11 @@
     <Compile Include="Sequences\SequenceGeneratorBase.cs" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="ContentFiles\poker.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
