@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace EulerLib.Poker
 {
-    public class Hand
+    public class Hand : IComparable<Hand>
     {
         public Hand(IEnumerable<Card> cards)
         {
@@ -26,6 +26,34 @@ namespace EulerLib.Poker
 
         public IList<Value> ValuesList { get; private set; }
 
+        public int CompareTo(Hand other)
+        {
+            if (Ranking > other.Ranking)
+            {
+                return 1;
+            }
+
+            if (Ranking < other.Ranking)
+            {
+                return -1;
+            }
+
+            for (var i = 0; i < ValuesList.Count; i++)
+            {
+                if (ValuesList[i] > other.ValuesList[i])
+                {
+                    return 1;
+                }
+
+                if (ValuesList[i] < other.ValuesList[i])
+                {
+                    return -1;
+                }
+            }
+
+            return 0;
+        }
+
         private void Interpret()
         {
             // Divide and conquer - if multiple cards have the same value, 
@@ -45,9 +73,9 @@ namespace EulerLib.Poker
         private void InterpretWhereSomeValuesMatch()
         {
             var grouping = Cards.GroupBy(c => c.Value)
-                                .OrderByDescending(g => g.Count())
-                                .ThenByDescending(g => g.Key)
-                                .ToList();
+                .OrderByDescending(g => g.Count())
+                .ThenByDescending(g => g.Key)
+                .ToList();
 
             if (grouping.Count == 4)
             {
