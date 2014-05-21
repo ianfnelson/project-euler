@@ -19,11 +19,16 @@ namespace EulerLib.Problems
             return SumMultiplesOfThreeAndFiveBelow(1000).ToString();
         }
 
+        public string Md5OfSolution
+        {
+            get { return "e1edf9d1967ca96767dcc2b2d6df69f4"; }
+        }
+
         public int SumMultiplesOfThreeAndFiveBelow(int ceiling)
         {
             return Enumerable.Range(1, ceiling - 1)
-                .Where(x => x % 3 == 0 || x % 5 == 0)
-                .Sum();
+                             .Where(x => x%3 == 0 || x%5 == 0)
+                             .Sum();
         }
     }
 }

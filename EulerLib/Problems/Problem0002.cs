@@ -20,6 +20,11 @@ namespace EulerLib.Problems
             return SumEvenFibonacciWithValuesNotExceeding(4000000).ToString();
         }
 
+        public string Md5OfSolution
+        {
+            get { return "4194eb91842c8e7e6df099ca73c38f28"; }
+        }
+
         public long SumEvenFibonacciWithValuesNotExceeding(int maxValue)
         {
             return new FibonacciNumbers().GenerateToMaximumValue(maxValue)

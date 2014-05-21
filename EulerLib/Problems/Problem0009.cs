@@ -31,5 +31,10 @@ namespace EulerLib.Problems
 
             return "failed";
         }
+
+        public string Md5OfSolution
+        {
+            get { return "24eaa9820350012ff678de47cb85b639"; }
+        }
     }
 }

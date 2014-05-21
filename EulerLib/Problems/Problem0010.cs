@@ -24,5 +24,10 @@ namespace EulerLib.Problems
         {
             return new PrimeNumbers().GenerateUsingEratosthenesSieve(ceiling - 1).Sum();
         }
+
+        public string Md5OfSolution
+        {
+            get { return "d915b2a9ac8749a6b837404815f1ae25"; }
+        }
     }
 }

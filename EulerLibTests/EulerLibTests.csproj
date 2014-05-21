@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\DivisorsExtensionFixture.cs" />
+    <Compile Include="Extensions\Md5ExtensionsFixture.cs" />
     <Compile Include="Extensions\PrimeFactorsExtensionFixture.cs" />
     <Compile Include="Extensions\SequenceMembershipExtensionsFixture.cs" />
     <Compile Include="Extensions\StringExtensionsFixture.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Sequences\FibonacciNumbersFixture.cs" />
     <Compile Include="Sequences\PerfectNumberFixture.cs" />
     <Compile Include="Sequences\PrimeNumbersFixture.cs" />
+    <Compile Include="SoakTestFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EulerLib\EulerLib.csproj">

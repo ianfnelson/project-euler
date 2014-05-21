@@ -22,6 +22,11 @@ namespace EulerLib.Problems
             return LargestProductOfDigits(SearchText, 5).ToString();
         }
 
+        public string Md5OfSolution
+        {
+            get { return "dd23490768a67ebc2fc92804d875f292"; }
+        }
+
         public int LargestProductOfDigits(string text, int digits)
         {
             var maxProduct = 0;

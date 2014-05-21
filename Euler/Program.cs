@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using EulerLib;
+using EulerLib.Extensions;
 
 namespace Euler
 {
@@ -21,7 +22,8 @@ namespace Euler
 
         private static void Solve(IProblem problem)
         {
-            Console.WriteLine("Solving problem ID {0} - {1}", problem.Id, problem.Title);
+            Console.WriteLine("Problem ID:      {0}", problem.Id);
+            Console.WriteLine("Title:           {0}", problem.Title);
 
             var sw = new Stopwatch();
             sw.Start();
@@ -30,8 +32,9 @@ namespace Euler
 
             sw.Stop();
 
-            Console.WriteLine("Answer: {0}", solution);
-            Console.WriteLine("Execution Time: {0:n0} milliseconds", sw.ElapsedMilliseconds);
+            Console.WriteLine("Solution:        {0}", solution);
+            Console.WriteLine("MD5 of solution: {0}", solution.ToMd5Hash());
+            Console.WriteLine("Execution Time:  {0:n0} milliseconds", sw.ElapsedMilliseconds);
             Console.WriteLine("");
         }
 

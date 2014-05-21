@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using EulerLib.Poker;
 
 namespace EulerLib.Problems
@@ -19,8 +20,14 @@ namespace EulerLib.Problems
 
         public string Solve()
         {
-            var filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ContentFiles\\poker.txt");
+            var executingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
+            var filePath = Path.Combine(executingDirectory, "ContentFiles\\poker.txt");
             return CountPlayer1WinsInFile(filePath).ToString();
+        }
+
+        public string Md5OfSolution
+        {
+            get { return "142949df56ea8ae0be8b5306971900a4"; }
         }
 
         public int CountPlayer1WinsInFile(string filePath)

@@ -17,6 +17,11 @@
             return SumSquareDifferenceOfNaturalsUpTo(100).ToString();
         }
 
+        public string Md5OfSolution
+        {
+            get { return "867380888952c39a131fe1d832246ecc"; }
+        }
+
         public long SumSquareDifferenceOfNaturalsUpTo(int n)
         {
             return SquareOfSumOfNaturalsTo(n) - SumOfSquaresOfNaturalsTo(n);

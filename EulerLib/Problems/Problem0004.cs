@@ -20,6 +20,11 @@ namespace EulerLib.Problems
             return LargestPalindromeMadeFromProductOfTwoIntegersWithDigits(3).ToString();
         }
 
+        public string Md5OfSolution
+        {
+            get { return "d4cfc27d16ea72a96b83d9bdef6ce2ec"; }
+        }
+
         public long LargestPalindromeMadeFromProductOfTwoIntegersWithDigits(int digits)
         {
             if (digits<1) throw new ArgumentOutOfRangeException("digits", "digits must be 1 or more");

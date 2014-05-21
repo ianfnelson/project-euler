@@ -20,6 +20,11 @@ namespace EulerLib.Problems
             return SmallestIntegerEvenlyDivisibleByNumbersFrom1To(20).ToString();
         }
 
+        public string Md5OfSolution
+        {
+            get { return "bc0d0a22a7a46212135ed0ba77d22f3a"; }
+        }
+
         public long SmallestIntegerEvenlyDivisibleByNumbersFrom1To(int maximum)
         {
             var primeFactorsAndMaxOccurrencesForEachDivisor = 
