@@ -7,7 +7,6 @@ namespace EulerLibTests.Extensions
     [TestFixture]
     public class Md5ExtensionsFixture
     {
-        // 31626
         [TestCase("Hello World!", "ed076287532e86365e841e92bfc50d8c")]
         public void ToMd5Hash(string input, string expectedHash)
         {
