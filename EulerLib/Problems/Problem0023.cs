@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using EulerLib.Extensions;
 using EulerLib.Sequences;
 
@@ -29,13 +31,13 @@ namespace EulerLib.Problems
 
             var total = 0;
 
-            for (var i = n; i >= 1; i--)
+            Parallel.For(1, n, x =>
             {
-                if (!IsSumOfTwoFromSet(abundants, i))
+                if (!IsSumOfTwoFromSet(abundants, x))
                 {
-                    total += i;
+                    Interlocked.Add(ref total, x);
                 }
-            }
+            });
 
             return total;
         }
