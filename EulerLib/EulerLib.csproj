@@ -65,6 +65,7 @@
     <Compile Include="Problems\Problem0021.cs" />
     <Compile Include="Problems\Problem0023.cs" />
     <Compile Include="Problems\Problem0054.cs" />
+    <Compile Include="Problems\Problem0067.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequences\AbundantNumbers.cs" />
     <Compile Include="Sequences\DeficientNumbers.cs" />
@@ -81,6 +82,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ContentFiles\problem18.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ContentFiles\triangle.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
