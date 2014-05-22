@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace EulerLib.Problems
 {
@@ -19,17 +21,17 @@ namespace EulerLib.Problems
 
         public string Solve()
         {
-            return LargestProductOfDigits(SearchText, 5).ToString();
+            return LargestProductOfDigits(SearchText, 13).ToString();
         }
 
         public string Md5OfSolution
         {
-            get { return "dd23490768a67ebc2fc92804d875f292"; }
+            get { return "0f53ea7949d32ef24f9186207600403c"; }
         }
 
-        public int LargestProductOfDigits(string text, int digits)
+        public long LargestProductOfDigits(string text, int digits)
         {
-            var maxProduct = 0;
+            var maxProduct = 0L;
             var textLength = text.Length;
 
             for (var pointer = 0; pointer < textLength - (digits - 1); pointer++)
@@ -43,9 +45,9 @@ namespace EulerLib.Problems
             return maxProduct;
         }
 
-        public int ProductOfDigits(string text)
+        public long ProductOfDigits(string text)
         {
-            return text.Aggregate(1, (current, c) => current * int.Parse(c.ToString()));
+            return text.Aggregate(1L, (current, c) => current * int.Parse(c.ToString()));
         }
     }
 }
