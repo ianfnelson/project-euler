@@ -67,6 +67,7 @@
     <Compile Include="Problems\Problem0007Fixture.cs" />
     <Compile Include="Problems\Problem0008Fixture.cs" />
     <Compile Include="Problems\Problem0010Fixture.cs" />
+    <Compile Include="Problems\Problem0018Fixture.cs" />
     <Compile Include="Problems\Problem0054Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequences\AbundantNumbersFixture.cs" />
@@ -88,6 +89,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="TestFiles\poker.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\problem18example.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
