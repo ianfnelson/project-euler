@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -61,6 +62,7 @@
     <Compile Include="Problems\Problem0008.cs" />
     <Compile Include="Problems\Problem0009.cs" />
     <Compile Include="Problems\Problem0010.cs" />
+    <Compile Include="Problems\Problem0013.cs" />
     <Compile Include="Problems\Problem0018.cs" />
     <Compile Include="Problems\Problem0021.cs" />
     <Compile Include="Problems\Problem0023.cs" />
@@ -79,6 +81,9 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="ContentFiles\poker.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ContentFiles\problem13.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ContentFiles\problem18.txt">
