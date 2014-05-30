@@ -69,6 +69,7 @@
     <Compile Include="Problems\Problem0010Fixture.cs" />
     <Compile Include="Problems\Problem0018Fixture.cs" />
     <Compile Include="Problems\Problem0029Fixture.cs" />
+    <Compile Include="Problems\Problem0030Fixture.cs" />
     <Compile Include="Problems\Problem0054Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequences\AbundantNumbersFixture.cs" />
@@ -79,6 +80,10 @@
     <Compile Include="SoakTestFixture.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EulerLibFSharp\EulerLibFSharp.fsproj">
+      <Project>{b52fbd79-c083-46c7-9154-3c3cb61cd450}</Project>
+      <Name>EulerLibFSharp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EulerLib\EulerLib.csproj">
       <Project>{0cc02d11-b180-4797-a0d9-c43f13541d36}</Project>
       <Name>EulerLib</Name>
