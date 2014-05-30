@@ -66,6 +66,7 @@
     <Compile Include="Problems\Problem0018.cs" />
     <Compile Include="Problems\Problem0021.cs" />
     <Compile Include="Problems\Problem0023.cs" />
+    <Compile Include="Problems\Problem0029.cs" />
     <Compile Include="Problems\Problem0054.cs" />
     <Compile Include="Problems\Problem0067.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -78,7 +79,12 @@
     <Compile Include="Sequences\PrimeNumbers.cs" />
     <Compile Include="Sequences\SequenceGeneratorBase.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\EulerLibFSharp\EulerLibFSharp.fsproj">
+      <Project>{b52fbd79-c083-46c7-9154-3c3cb61cd450}</Project>
+      <Name>EulerLibFSharp</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="ContentFiles\poker.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

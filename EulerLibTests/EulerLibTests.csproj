@@ -68,6 +68,7 @@
     <Compile Include="Problems\Problem0008Fixture.cs" />
     <Compile Include="Problems\Problem0010Fixture.cs" />
     <Compile Include="Problems\Problem0018Fixture.cs" />
+    <Compile Include="Problems\Problem0029Fixture.cs" />
     <Compile Include="Problems\Problem0054Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequences\AbundantNumbersFixture.cs" />
