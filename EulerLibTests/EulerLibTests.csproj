@@ -68,6 +68,7 @@
     <Compile Include="Problems\Problem0008Fixture.cs" />
     <Compile Include="Problems\Problem0010Fixture.cs" />
     <Compile Include="Problems\Problem0011Fixture.cs" />
+    <Compile Include="Problems\Problem0012Fixture.cs" />
     <Compile Include="Problems\Problem0018Fixture.cs" />
     <Compile Include="Problems\Problem0029Fixture.cs" />
     <Compile Include="Problems\Problem0030Fixture.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Sequences\FibonacciNumbersFixture.cs" />
     <Compile Include="Sequences\PerfectNumberFixture.cs" />
     <Compile Include="Sequences\PrimeNumbersFixture.cs" />
+    <Compile Include="Sequences\TriangularNumbersFixture.cs" />
     <Compile Include="SoakTestFixture.cs" />
   </ItemGroup>
   <ItemGroup>
