@@ -95,10 +95,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="TestFiles\poker.txt">
+    <Content Include="TestFiles\problem0054example.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="TestFiles\problem18example.txt">
+    <Content Include="TestFiles\problem0018example.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

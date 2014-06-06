@@ -20,7 +20,7 @@ namespace EulerLib.Problems
         public string Solve()
         {
             var executingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var filePath = Path.Combine(executingDirectory, "ContentFiles\\problem13.txt");
+            var filePath = Path.Combine(executingDirectory, "ContentFiles\\problem0013.txt");
 
             return SumBigIntegers(filePath).ToString().Substring(0,10);
         }

@@ -88,16 +88,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ContentFiles\poker.txt">
+    <Content Include="ContentFiles\problem0054.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ContentFiles\problem13.txt">
+    <Content Include="ContentFiles\problem0011.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ContentFiles\problem18.txt">
+    <Content Include="ContentFiles\problem0013.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="ContentFiles\triangle.txt">
+    <Content Include="ContentFiles\problem0018.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ContentFiles\problem0067.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

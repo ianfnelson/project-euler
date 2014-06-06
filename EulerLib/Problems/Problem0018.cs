@@ -22,7 +22,7 @@ namespace EulerLib.Problems
         public string Solve()
         {
             var executingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var filePath = Path.Combine(executingDirectory, "ContentFiles\\problem18.txt");
+            var filePath = Path.Combine(executingDirectory, "ContentFiles\\problem0018.txt");
             return MaximumPathThroughTriangle(filePath).ToString();
         }
 

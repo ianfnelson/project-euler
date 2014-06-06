@@ -12,7 +12,7 @@ namespace EulerLibTests.Problems
         [Test]
         public void MaxSumThroughSampleIs23()
         {
-            var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestFiles\\problem18example.txt");
+            var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestFiles\\problem0018example.txt");
 
             var sut = new Problem0018();
 

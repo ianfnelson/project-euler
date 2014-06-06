@@ -21,7 +21,7 @@ namespace EulerLib.Problems
         public string Solve()
         {
             var executingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var filePath = Path.Combine(executingDirectory, "ContentFiles\\poker.txt");
+            var filePath = Path.Combine(executingDirectory, "ContentFiles\\problem0054.txt");
             return CountPlayer1WinsInFile(filePath).ToString();
         }
 
