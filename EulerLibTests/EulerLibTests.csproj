@@ -67,6 +67,7 @@
     <Compile Include="Problems\Problem0007Fixture.cs" />
     <Compile Include="Problems\Problem0008Fixture.cs" />
     <Compile Include="Problems\Problem0010Fixture.cs" />
+    <Compile Include="Problems\Problem0011Fixture.cs" />
     <Compile Include="Problems\Problem0018Fixture.cs" />
     <Compile Include="Problems\Problem0029Fixture.cs" />
     <Compile Include="Problems\Problem0030Fixture.cs" />
@@ -95,6 +96,18 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="TestFiles\problem0011example4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\problem0011example3.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\problem0011example2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="TestFiles\problem0011example1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="TestFiles\problem0054example.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
