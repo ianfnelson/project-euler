@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\IntegerExtensions.cs" />
     <Compile Include="Extensions\DivisorsExtension.cs" />
     <Compile Include="Extensions\EnumerableExtensions.cs" />
     <Compile Include="Extensions\Md5Extensions.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Problems\Problem0012.cs" />
     <Compile Include="Problems\Problem0013.cs" />
     <Compile Include="Problems\Problem0014.cs" />
+    <Compile Include="Problems\Problem0015.cs" />
     <Compile Include="Problems\Problem0018.cs" />
     <Compile Include="Problems\Problem0021.cs" />
     <Compile Include="Problems\Problem0023.cs" />

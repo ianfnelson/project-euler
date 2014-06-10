@@ -44,6 +44,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\IntegerExtensionsFixture.cs" />
     <Compile Include="Extensions\DivisorsExtensionFixture.cs" />
     <Compile Include="Extensions\Md5ExtensionsFixture.cs" />
     <Compile Include="Extensions\PrimeFactorsExtensionFixture.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="Problems\Problem0011Fixture.cs" />
     <Compile Include="Problems\Problem0012Fixture.cs" />
     <Compile Include="Problems\Problem0014Fixture.cs" />
+    <Compile Include="Problems\Problem0015Fixture.cs" />
     <Compile Include="Problems\Problem0018Fixture.cs" />
     <Compile Include="Problems\Problem0029Fixture.cs" />
     <Compile Include="Problems\Problem0030Fixture.cs" />

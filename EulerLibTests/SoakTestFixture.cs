@@ -9,7 +9,6 @@ using NUnit.Framework;
 namespace EulerLibTests
 {
     [TestFixture]
-    [Ignore]
     public class SoakTestFixture
     {
         [Test]
