@@ -69,6 +69,7 @@
     <Compile Include="Problems\Problem0010Fixture.cs" />
     <Compile Include="Problems\Problem0011Fixture.cs" />
     <Compile Include="Problems\Problem0012Fixture.cs" />
+    <Compile Include="Problems\Problem0014Fixture.cs" />
     <Compile Include="Problems\Problem0018Fixture.cs" />
     <Compile Include="Problems\Problem0029Fixture.cs" />
     <Compile Include="Problems\Problem0030Fixture.cs" />
