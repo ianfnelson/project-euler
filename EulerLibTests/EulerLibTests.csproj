@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Extensions\BigIntegerExtensionsFixture.cs" />
     <Compile Include="Extensions\IntegerExtensionsFixture.cs" />
     <Compile Include="Extensions\DivisorsExtensionFixture.cs" />
     <Compile Include="Extensions\Md5ExtensionsFixture.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Problems\Problem0012Fixture.cs" />
     <Compile Include="Problems\Problem0014Fixture.cs" />
     <Compile Include="Problems\Problem0015Fixture.cs" />
+    <Compile Include="Problems\Problem0016Fixture.cs" />
     <Compile Include="Problems\Problem0018Fixture.cs" />
     <Compile Include="Problems\Problem0026Fixture.cs" />
     <Compile Include="Problems\Problem0029Fixture.cs" />
