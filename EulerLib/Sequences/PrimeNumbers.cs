@@ -16,12 +16,11 @@ namespace EulerLib.Sequences
 
             do
             {
-                var upperBound = Math.Sqrt(trialPrime);
                 var isPrime = true;
 
                 foreach (var trialDivisor in primes)
                 {
-                    if (trialDivisor > upperBound) break;
+                    if (trialDivisor * trialDivisor > trialPrime) break;
 
                     if (trialPrime % trialDivisor == 0)
                     {

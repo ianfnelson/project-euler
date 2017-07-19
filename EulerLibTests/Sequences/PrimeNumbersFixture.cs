@@ -37,6 +37,7 @@ namespace EulerLibTests.Sequences
         [TestCase(15, 47)]
         [TestCase(20, 71)]
         [TestCase(100, 541)]
+        [TestCase(20000,224737)]
         public void GenerateToMaximumSizeTests(int maximumSize, int lastPrime)
         {
             var sequence = new PrimeNumbers().GenerateToMaximumSize(maximumSize).ToList();
