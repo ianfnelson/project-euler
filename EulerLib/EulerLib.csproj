@@ -80,6 +80,7 @@
     <Compile Include="Problems\Problem0047.cs" />
     <Compile Include="Problems\Problem0054.cs" />
     <Compile Include="Problems\Problem0055.cs" />
+    <Compile Include="Problems\Problem0056.cs" />
     <Compile Include="Problems\Problem0067.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequences\AbundantNumbers.cs" />
