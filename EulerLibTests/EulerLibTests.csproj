@@ -82,6 +82,7 @@
     <Compile Include="Problems\Problem0031Fixture.cs" />
     <Compile Include="Problems\Problem0047Fixture.cs" />
     <Compile Include="Problems\Problem0054Fixture.cs" />
+    <Compile Include="Problems\Problem0055Fixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sequences\AbundantNumbersFixture.cs" />
     <Compile Include="Sequences\DeficientNumbersFixture.cs" />

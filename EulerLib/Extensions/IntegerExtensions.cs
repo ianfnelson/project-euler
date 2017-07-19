@@ -1,4 +1,6 @@
-﻿using System.Numerics;
+﻿using System;
+using System.Globalization;
+using System.Numerics;
 
 namespace EulerLib.Extensions
 {

@@ -1,4 +1,5 @@
-﻿using System.Numerics;
+﻿using System.Globalization;
+using System.Numerics;
 
 namespace EulerLib.Extensions
 {
@@ -14,6 +15,16 @@ namespace EulerLib.Extensions
             }
 
             return sum;
+        }
+
+        public static BigInteger Reverse(this BigInteger n)
+        {
+            var stringyN = n.ToString(CultureInfo.InvariantCulture);
+
+            var reverseStringyN = stringyN.ReverseString();
+
+            return BigInteger.Parse(reverseStringyN);
+
         }
     }
 }

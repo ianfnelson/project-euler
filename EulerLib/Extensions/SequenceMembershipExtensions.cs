@@ -1,5 +1,6 @@
 ﻿using System.Globalization;
 using System.Linq;
+using System.Numerics;
 
 namespace EulerLib.Extensions
 {
@@ -53,6 +54,13 @@ namespace EulerLib.Extensions
         public static bool IsPalindromic(this long n)
         {
             var stringyN = n.ToString(CultureInfo.InvariantCulture);
+
+            return stringyN.Equals(stringyN.ReverseString());
+        }
+
+        public static bool IsPalindromic(this BigInteger n)
+        {
+            var stringyN = n.ToString();
 
             return stringyN.Equals(stringyN.ReverseString());
         }
