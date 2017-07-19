@@ -14,19 +14,28 @@ namespace EulerLib.Extensions
         {
             if (n == 1) yield break;
 
-            foreach (var prime in new PrimeNumbers().Generate())
+            while (n % 2 == 0)
             {
-                if (n % prime == 0)
-                {
-                    while (n % prime == 0)
-                    {
-                        yield return prime;
-                        n = n / prime;
-                    }
+                yield return 2;
+                n /= 2;
+            }
 
-                    if (n == 1) break;
+            var trialDivisor = 3;
+
+            while (trialDivisor * trialDivisor <= n)
+            {
+                if (n % trialDivisor == 0)
+                {
+                    yield return trialDivisor;
+                    n /= trialDivisor;
+                }
+                else
+                {
+                    trialDivisor += 2;
                 }
             }
+
+            if (n > 1) yield return n;
         }
     }
 }

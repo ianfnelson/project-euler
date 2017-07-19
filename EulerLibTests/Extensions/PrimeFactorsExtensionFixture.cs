@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using EulerLib.Extensions;
 using FluentAssertions;
 using NUnit.Framework;
@@ -30,6 +31,19 @@ namespace EulerLibTests.Extensions
             var sequence = 13195.PrimeFactors().ToList();
 
             sequence.ShouldAllBeEquivalentTo(new[] {5, 7, 13, 29});
+        }
+
+        [Test]
+        public void PrimeFactorsOfFirst3500Numbers()
+        {
+            IEnumerable<long> result = null;
+
+            for (int i = 1; i <= 3500; i++)
+            {
+                result = i.PrimeFactors().ToList();
+            }
+
+            result.ShouldAllBeEquivalentTo(new[] {2,2,5,5,5,7});
         }
     }
 }
