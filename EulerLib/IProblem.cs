@@ -1,11 +1,10 @@
-﻿namespace EulerLib
-{
-    public interface IProblem
-    {
-        int Id { get; }
-        string Title { get; }
-        string Solve();
+namespace EulerLib;
 
-        string Md5OfSolution { get; }
-    }
+public interface IProblem
+{
+    int Id { get; }
+    string Title { get; }
+    string Solve();
+
+    string Md5OfSolution { get; }
 }
