@@ -1,137 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B4396E79-5B9B-4F09-AAD5-E5EFD5B85D39}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EulerLibTests</RootNamespace>
-    <AssemblyName>EulerLibTests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="FluentAssertions">
-      <HintPath>..\packages\FluentAssertions.3.0.107\lib\net45\FluentAssertions.dll</HintPath>
-    </Reference>
-    <Reference Include="FluentAssertions.Core">
-      <HintPath>..\packages\FluentAssertions.3.0.107\lib\net45\FluentAssertions.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Ploeh.AutoFixture">
-      <HintPath>..\packages\AutoFixture.3.18.7\lib\net40\Ploeh.AutoFixture.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Numerics" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Extensions\BigIntegerExtensionsFixture.cs" />
-    <Compile Include="Extensions\IntegerExtensionsFixture.cs" />
-    <Compile Include="Extensions\DivisorsExtensionFixture.cs" />
-    <Compile Include="Extensions\Md5ExtensionsFixture.cs" />
-    <Compile Include="Extensions\PrimeFactorsExtensionFixture.cs" />
-    <Compile Include="Extensions\SequenceMembershipExtensionsFixture.cs" />
-    <Compile Include="Extensions\StringExtensionsFixture.cs" />
-    <Compile Include="Poker\CardFixture.cs" />
-    <Compile Include="Poker\HandFixture.cs" />
-    <Compile Include="Problems\Problem0001Fixture.cs" />
-    <Compile Include="Problems\Problem0002Fixture.cs" />
-    <Compile Include="Problems\Problem0003Fixture.cs" />
-    <Compile Include="Problems\Problem0004Fixture.cs" />
-    <Compile Include="Problems\Problem0005Fixture.cs" />
-    <Compile Include="Problems\Problem0006Fixture.cs" />
-    <Compile Include="Problems\Problem0007Fixture.cs" />
-    <Compile Include="Problems\Problem0008Fixture.cs" />
-    <Compile Include="Problems\Problem0010Fixture.cs" />
-    <Compile Include="Problems\Problem0011Fixture.cs" />
-    <Compile Include="Problems\Problem0012Fixture.cs" />
-    <Compile Include="Problems\Problem0014Fixture.cs" />
-    <Compile Include="Problems\Problem0015Fixture.cs" />
-    <Compile Include="Problems\Problem0016Fixture.cs" />
-    <Compile Include="Problems\Problem0018Fixture.cs" />
-    <Compile Include="Problems\Problem0026Fixture.cs" />
-    <Compile Include="Problems\Problem0029Fixture.cs" />
-    <Compile Include="Problems\Problem0030Fixture.cs" />
-    <Compile Include="Problems\Problem0031Fixture.cs" />
-    <Compile Include="Problems\Problem0047Fixture.cs" />
-    <Compile Include="Problems\Problem0054Fixture.cs" />
-    <Compile Include="Problems\Problem0055Fixture.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sequences\AbundantNumbersFixture.cs" />
-    <Compile Include="Sequences\DeficientNumbersFixture.cs" />
-    <Compile Include="Sequences\FibonacciNumbersFixture.cs" />
-    <Compile Include="Sequences\PerfectNumberFixture.cs" />
-    <Compile Include="Sequences\PrimeNumbersFixture.cs" />
-    <Compile Include="Sequences\TriangularNumbersFixture.cs" />
-    <Compile Include="SoakTestFixture.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EulerLibFSharp\EulerLibFSharp.fsproj">
-      <Project>{b52fbd79-c083-46c7-9154-3c3cb61cd450}</Project>
-      <Name>EulerLibFSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EulerLib\EulerLib.csproj">
-      <Project>{0cc02d11-b180-4797-a0d9-c43f13541d36}</Project>
-      <Name>EulerLib</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Content Include="TestFiles\problem0011example4.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestFiles\problem0011example3.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestFiles\problem0011example2.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestFiles\problem0011example1.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestFiles\problem0054example.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="TestFiles\problem0018example.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <IsPackable>false</IsPackable>
+        <IsTestProject>true</IsTestProject>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentAssertions" Version="6.12.0" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0"/>
+        <PackageReference Include="NUnit" Version="3.13.3"/>
+        <PackageReference Include="NUnit3TestAdapter" Version="4.2.1"/>
+        <PackageReference Include="NUnit.Analyzers" Version="3.6.1"/>
+        <PackageReference Include="coverlet.collector" Version="6.0.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EulerLib\EulerLib.csproj" />
+    </ItemGroup>
+
 </Project>
