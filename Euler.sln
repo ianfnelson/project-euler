@@ -1,15 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euler", "Euler\Euler.csproj", "{67FBF10A-CDDE-4092-8B09-A81E8A2864F8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Euler", "Euler\Euler.csproj", "{287F1348-5F80-429D-A4B9-EEC1684BC43B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerLib", "EulerLib\EulerLib.csproj", "{0CC02D11-B180-4797-A0D9-C43F13541D36}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerLib", "EulerLib\EulerLib.csproj", "{D85CC772-A3E3-427D-8D89-DB0C44F0B7E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerLibTests", "EulerLibTests\EulerLibTests.csproj", "{B4396E79-5B9B-4F09-AAD5-E5EFD5B85D39}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "EulerLibFSharp", "EulerLibFSharp\EulerLibFSharp.fsproj", "{B52FBD79-C083-46C7-9154-3C3CB61CD450}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EulerLibTests", "EulerLibTests\EulerLibTests.csproj", "{2F117928-8DB7-4155-9DA7-459EB6012CF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,27 +12,17 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{67FBF10A-CDDE-4092-8B09-A81E8A2864F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{67FBF10A-CDDE-4092-8B09-A81E8A2864F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{67FBF10A-CDDE-4092-8B09-A81E8A2864F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{67FBF10A-CDDE-4092-8B09-A81E8A2864F8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0CC02D11-B180-4797-A0D9-C43F13541D36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0CC02D11-B180-4797-A0D9-C43F13541D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0CC02D11-B180-4797-A0D9-C43F13541D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0CC02D11-B180-4797-A0D9-C43F13541D36}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B4396E79-5B9B-4F09-AAD5-E5EFD5B85D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B4396E79-5B9B-4F09-AAD5-E5EFD5B85D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B4396E79-5B9B-4F09-AAD5-E5EFD5B85D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B4396E79-5B9B-4F09-AAD5-E5EFD5B85D39}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B52FBD79-C083-46C7-9154-3C3CB61CD450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B52FBD79-C083-46C7-9154-3C3CB61CD450}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B52FBD79-C083-46C7-9154-3C3CB61CD450}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B52FBD79-C083-46C7-9154-3C3CB61CD450}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NDepend) = preSolution
-		Project = ".\Euler.ndproj"
+		{287F1348-5F80-429D-A4B9-EEC1684BC43B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{287F1348-5F80-429D-A4B9-EEC1684BC43B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{287F1348-5F80-429D-A4B9-EEC1684BC43B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{287F1348-5F80-429D-A4B9-EEC1684BC43B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D85CC772-A3E3-427D-8D89-DB0C44F0B7E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D85CC772-A3E3-427D-8D89-DB0C44F0B7E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D85CC772-A3E3-427D-8D89-DB0C44F0B7E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D85CC772-A3E3-427D-8D89-DB0C44F0B7E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F117928-8DB7-4155-9DA7-459EB6012CF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F117928-8DB7-4155-9DA7-459EB6012CF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F117928-8DB7-4155-9DA7-459EB6012CF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F117928-8DB7-4155-9DA7-459EB6012CF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
