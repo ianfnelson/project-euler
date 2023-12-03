@@ -1,5 +1,3 @@
-using System.CodeDom.Compiler;
-
 namespace EulerLib.Sets;
 
 public static class PandigitalNumbers
@@ -8,7 +6,7 @@ public static class PandigitalNumbers
     {
         var digits = GetDigitCharacters(startDigit, endDigit).ToArray();
 
-        foreach (var permutation in Permutator.Permute(digits, 0, digits.Length-1))
+        foreach (var permutation in Permutator.Permute(digits))
         {
             yield return permutation;
         }
