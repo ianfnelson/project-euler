@@ -1,22 +1,19 @@
-﻿using System.Collections.Generic;
+﻿namespace EulerLib.Sequences;
 
-namespace EulerLib.Sequences
+public class FibonacciNumbers : SequenceGeneratorBase
 {
-    public class FibonacciNumbers : SequenceGeneratorBase
+    public override IEnumerable<long> Generate()
     {
-        public override IEnumerable<long> Generate()
+        var a = 0;
+        var b = 1;
+
+        do
         {
-            var a = 0;
-            var b = 1;
+            var result = a + b;
+            a = b;
+            b = result;
 
-            do
-            {
-                var result = a + b;
-                a = b;
-                b = result;
-
-                yield return result;
-            } while (true);
-        }
+            yield return result;
+        } while (true);
     }
 }

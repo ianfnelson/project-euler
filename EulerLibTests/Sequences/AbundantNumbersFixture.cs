@@ -10,7 +10,7 @@ namespace EulerLibTests.Sequences
         [TestCase(2, 20)]
         [TestCase(3, 24)]
         [TestCase(4, 30)]
-        public void AbundantsTestCases(int index, int value)
+        public void AbundantTestCases(int index, int value)
         {
             var sequence = new AbundantNumbers().GenerateToMaximumSize(index+1).ToList();
 
@@ -19,11 +19,11 @@ namespace EulerLibTests.Sequences
         }
 
         [Test]
-        public void AbundantsTestCases_UsingGenerateToMaximumValue()
+        public void AbundantTestCases_UsingGenerateToMaximumValue()
         {
             var sequence = new AbundantNumbers().GenerateToMaximumValue(30);
 
-            sequence.Should().AllBeEquivalentTo(new []{12,18,20,24,30});
+            sequence.Should().BeEquivalentTo(new []{12,18,20,24,30});
         }
     }
 }

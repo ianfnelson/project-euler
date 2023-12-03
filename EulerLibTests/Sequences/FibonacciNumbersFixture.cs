@@ -10,7 +10,7 @@ namespace EulerLibTests.Sequences
         {
             var sequence = new FibonacciNumbers().GenerateToMaximumSize(10);
 
-            sequence.Should().AllBeEquivalentTo(new[] { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 });
+            sequence.Should().BeEquivalentTo(new[] { 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 });
         }
 
         [Test]
@@ -18,7 +18,7 @@ namespace EulerLibTests.Sequences
         {
             var sequence = new FibonacciNumbers().GenerateToMaximumValue(50);
 
-            sequence.Should().AllBeEquivalentTo(new[] { 1, 2, 3, 5, 8, 13, 21, 34});
+            sequence.Should().BeEquivalentTo(new[] { 1, 2, 3, 5, 8, 13, 21, 34});
         }
     }
 }

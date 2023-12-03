@@ -19,7 +19,7 @@ namespace EulerLibTests.Extensions
         {
             var sequence = 12.PrimeFactors().ToList();
             
-            sequence.Should().AllBeEquivalentTo(new[] {2, 2, 3});
+            sequence.Should().BeEquivalentTo(new[] {2, 2, 3});
         }
 
         [Test]
@@ -27,7 +27,7 @@ namespace EulerLibTests.Extensions
         {
             var sequence = 13195.PrimeFactors().ToList();
 
-            sequence.Should().AllBeEquivalentTo(new[] {5, 7, 13, 29});
+            sequence.Should().BeEquivalentTo(new[] {5, 7, 13, 29});
         }
 
         [Test]
@@ -40,7 +40,7 @@ namespace EulerLibTests.Extensions
                 result = i.PrimeFactors().ToList();
             }
 
-            result.Should().AllBeEquivalentTo(new[] {2,2,5,5,5,7});
+            result.Should().BeEquivalentTo(new[] {2,2,5,5,5,7});
         }
     }
 }

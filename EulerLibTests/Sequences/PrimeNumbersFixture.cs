@@ -46,7 +46,7 @@ namespace EulerLibTests.Sequences
         {
             var sequence = new PrimeNumbers().GenerateUsingEratosthenesSieve(20).ToList();
 
-            sequence.Should().AllBeEquivalentTo(new[] { 2, 3, 5, 7, 11, 13, 17, 19 });
+            sequence.Should().BeEquivalentTo(new[] { 2, 3, 5, 7, 11, 13, 17, 19 });
         }
 
         [Test]
@@ -54,7 +54,7 @@ namespace EulerLibTests.Sequences
         {
             var sequence = new PrimeNumbers().GenerateUsingEratosthenesSieve(30).ToList();
 
-            sequence.Should().AllBeEquivalentTo(new[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 });
+            sequence.Should().BeEquivalentTo(new[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 });
         }
     }
 }

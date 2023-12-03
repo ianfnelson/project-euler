@@ -42,11 +42,11 @@ namespace EulerLibTests.Extensions
         }
 
         [TestCase(4, new[] { 1, 2 })]
-        public void Foo(int n, int[] expectedDivisors)
+        public void ProperDivisors_ValuesTest(int n, int[] expectedDivisors)
         {
             var divisors = n.ProperDivisors();
 
-            divisors.Should().AllBeEquivalentTo(expectedDivisors);
+            divisors.Should().BeEquivalentTo(expectedDivisors);
         }
     }
 }

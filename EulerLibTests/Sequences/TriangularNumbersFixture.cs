@@ -10,7 +10,7 @@ namespace EulerLibTests.Sequences
         {
             var sequence = new TriangularNumbers().GenerateToMaximumSize(10);
 
-            sequence.Should().AllBeEquivalentTo(new[] { 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 });
+            sequence.Should().BeEquivalentTo(new[] { 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 });
         }
 
         [Test]
@@ -18,7 +18,7 @@ namespace EulerLibTests.Sequences
         {
             var sequence = new TriangularNumbers().GenerateToMaximumValue(22);
 
-            sequence.Should().AllBeEquivalentTo(new[] { 1, 3, 6, 10, 15, 21 });
+            sequence.Should().BeEquivalentTo(new[] { 1, 3, 6, 10, 15, 21 });
         }
     }
 }
