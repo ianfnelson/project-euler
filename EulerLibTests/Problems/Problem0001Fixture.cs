@@ -11,7 +11,7 @@ public class Problem0001Fixture
     {
         var sut = new Problem0001();
 
-        var result = sut.SumMultiplesOfThreeAndFiveBelow(10);
+        var result = Problem0001.SumMultiplesOfThreeAndFiveBelow(10);
 
         result.Should().Be(23);
     }

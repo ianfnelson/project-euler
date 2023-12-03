@@ -12,7 +12,7 @@ namespace EulerLibTests.Problems
         {
             var sut = new Problem0007();
 
-            var result = sut.PrimeInPosition(6);
+            var result = Problem0007.PrimeInPosition(6);
 
             result.Should().Be(13);
         }

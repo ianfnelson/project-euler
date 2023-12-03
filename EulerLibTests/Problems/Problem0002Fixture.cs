@@ -12,7 +12,7 @@ namespace EulerLibTests.Problems
         {
             var sut = new Problem0002();
 
-            var result = sut.SumEvenFibonacciWithValuesNotExceeding(89);
+            var result = Problem0002.SumEvenFibonacciWithValuesNotExceeding(89);
 
             result.Should().Be(44);
         }

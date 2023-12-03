@@ -1,33 +1,23 @@
-﻿using System.Linq;
-using EulerLib.Extensions;
+﻿using EulerLib.Extensions;
 
-namespace EulerLib.Problems
+namespace EulerLib.Problems;
+
+public class Problem0005 : IProblem
 {
-    public class Problem0005 : IProblem
+    public int Id => 5;
+
+    public string Title => "Smallest multiple";
+
+    public string Solve()
     {
-        public int Id
-        {
-            get { return 5; }
-        }
+        return SmallestIntegerEvenlyDivisibleByNumbersFrom1To(20).ToString();
+    }
 
-        public string Title
-        {
-            get { return "Smallest multiple"; }
-        }
+    public string Md5OfSolution => "bc0d0a22a7a46212135ed0ba77d22f3a";
 
-        public string Solve()
-        {
-            return SmallestIntegerEvenlyDivisibleByNumbersFrom1To(20).ToString();
-        }
-
-        public string Md5OfSolution
-        {
-            get { return "bc0d0a22a7a46212135ed0ba77d22f3a"; }
-        }
-
-        public long SmallestIntegerEvenlyDivisibleByNumbersFrom1To(int maximum)
-        {
-            var primeFactorsAndMaxOccurrencesForEachDivisor = 
+    public long SmallestIntegerEvenlyDivisibleByNumbersFrom1To(int maximum)
+    {
+        var primeFactorsAndMaxOccurrencesForEachDivisor = 
             Enumerable.Range(1, maximum)
                 .SelectMany(x => x.PrimeFactors()
                     .GroupBy(pf => pf)
@@ -35,18 +25,17 @@ namespace EulerLib.Problems
                 .GroupBy(y => y.PrimeFactor)
                 .Select(z => new {PrimeFactor = z.Key, MaxCount = z.Max(q => q.Count)});
 
-            long total = 1;
+        long total = 1;
 
-            foreach (var pf in primeFactorsAndMaxOccurrencesForEachDivisor)
+        foreach (var pf in primeFactorsAndMaxOccurrencesForEachDivisor)
+        {
+            for (var i = 1; i <= pf.MaxCount; i++)
             {
-                for (var i = 1; i <= pf.MaxCount; i++)
-                {
-                    total *= pf.PrimeFactor;
-                }
+                total *= pf.PrimeFactor;
             }
-
-            return total;
-
         }
+
+        return total;
+
     }
 }

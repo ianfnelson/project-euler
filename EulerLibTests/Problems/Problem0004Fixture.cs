@@ -16,7 +16,7 @@ namespace EulerLibTests.Problems
             var sut = new Problem0004();
             var ex =
                 Assert.Throws<ArgumentOutOfRangeException>(
-                    () => sut.LargestPalindromeMadeFromProductOfTwoIntegersWithDigits(digits));
+                    () => Problem0004.LargestPalindromeMadeFromProductOfTwoIntegersWithDigits(digits));
 
             ex.Message.Should().Contain("digits must be 1 or more");
             ex.ParamName.Should().Be("digits");
@@ -27,7 +27,7 @@ namespace EulerLibTests.Problems
         {
             var sut = new Problem0004();
 
-            var result = sut.LargestPalindromeMadeFromProductOfTwoIntegersWithDigits(2);
+            var result = Problem0004.LargestPalindromeMadeFromProductOfTwoIntegersWithDigits(2);
 
             result.Should().Be(9009);
         }
