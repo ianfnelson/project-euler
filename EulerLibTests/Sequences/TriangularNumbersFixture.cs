@@ -1,6 +1,4 @@
 ﻿using EulerLib.Sequences;
-using FluentAssertions;
-using NUnit.Framework;
 
 namespace EulerLibTests.Sequences
 {
@@ -12,7 +10,7 @@ namespace EulerLibTests.Sequences
         {
             var sequence = new TriangularNumbers().GenerateToMaximumSize(10);
 
-            sequence.ShouldAllBeEquivalentTo(new[] { 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 });
+            sequence.Should().AllBeEquivalentTo(new[] { 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 });
         }
 
         [Test]
@@ -20,7 +18,7 @@ namespace EulerLibTests.Sequences
         {
             var sequence = new TriangularNumbers().GenerateToMaximumValue(22);
 
-            sequence.ShouldAllBeEquivalentTo(new[] { 1, 3, 6, 10, 15, 21 });
+            sequence.Should().AllBeEquivalentTo(new[] { 1, 3, 6, 10, 15, 21 });
         }
     }
 }

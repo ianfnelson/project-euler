@@ -1,8 +1,4 @@
-﻿using System;
-using System.IO;
-using EulerLib.Problems;
-using FluentAssertions;
-using NUnit.Framework;
+﻿using EulerLib.Problems;
 
 namespace EulerLibTests.Problems
 {
@@ -35,11 +31,9 @@ namespace EulerLibTests.Problems
 
         private void DoMaximumProductInAGridTest(string filename, int adjacentNumbers,int expectedResult)
         {
-            var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestFiles\\", filename);
-
             var sut = new Problem0011();
 
-            var result = sut.MaximumProductInAGrid(file, adjacentNumbers);
+            var result = sut.MaximumProductInAGrid($"TestFiles/{filename}", adjacentNumbers);
 
             result.Should().Be(expectedResult);
         }

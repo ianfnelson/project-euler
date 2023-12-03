@@ -20,8 +20,7 @@ namespace EulerLib.Problems
 
         public string Solve()
         {
-            var executingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var filePath = Path.Combine(executingDirectory, "ContentFiles\\problem0011.txt");
+            var filePath = "ContentFiles/problem0011.txt";
             return MaximumProductInAGrid(filePath, 4).ToString();
         }
 

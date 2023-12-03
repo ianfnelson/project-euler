@@ -21,9 +21,7 @@ namespace EulerLib.Problems
 
         public string Solve()
         {
-            var executingDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var filePath = Path.Combine(executingDirectory, "ContentFiles\\problem0018.txt");
-            return MaximumPathThroughTriangle(filePath).ToString();
+            return MaximumPathThroughTriangle("ContentFiles/problem0018.txt").ToString();
         }
 
         public long MaximumPathThroughTriangle(string filePath)

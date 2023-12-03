@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using EulerLib.Sequences;
-using FluentAssertions;
-using NUnit.Framework;
+﻿using EulerLib.Sequences;
 
 namespace EulerLibTests.Sequences
 {
@@ -27,7 +23,7 @@ namespace EulerLibTests.Sequences
         {
             var sequence = new AbundantNumbers().GenerateToMaximumValue(30);
 
-            sequence.ShouldAllBeEquivalentTo(new []{12,18,20,24,30});
+            sequence.Should().AllBeEquivalentTo(new []{12,18,20,24,30});
         }
     }
 }

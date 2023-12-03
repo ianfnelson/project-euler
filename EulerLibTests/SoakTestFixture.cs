@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
+﻿using System.Reflection;
 using EulerLib;
 using EulerLib.Extensions;
-using NUnit.Framework;
 
 namespace EulerLibTests
 {

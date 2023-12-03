@@ -1,8 +1,5 @@
-﻿using System;
+﻿using AutoFixture;
 using EulerLib.Poker;
-using FluentAssertions;
-using NUnit.Framework;
-using Ploeh.AutoFixture;
 
 namespace EulerLibTests.Poker
 {

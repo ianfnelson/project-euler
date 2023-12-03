@@ -1,7 +1,4 @@
-﻿using System.Linq;
-using EulerLib.Extensions;
-using FluentAssertions;
-using NUnit.Framework;
+﻿using EulerLib.Extensions;
 
 namespace EulerLibTests.Extensions
 {
@@ -49,7 +46,7 @@ namespace EulerLibTests.Extensions
         {
             var divisors = n.ProperDivisors();
 
-            divisors.ShouldAllBeEquivalentTo(expectedDivisors);
+            divisors.Should().AllBeEquivalentTo(expectedDivisors);
         }
     }
 }

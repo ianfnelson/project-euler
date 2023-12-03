@@ -1,8 +1,4 @@
-﻿using System;
-using System.IO;
-using EulerLib.Problems;
-using FluentAssertions;
-using NUnit.Framework;
+﻿using EulerLib.Problems;
 
 namespace EulerLibTests.Problems
 {
@@ -12,7 +8,7 @@ namespace EulerLibTests.Problems
         [Test]
         public void MaxSumThroughSampleIs23()
         {
-            var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestFiles\\problem0018example.txt");
+            var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestFiles/problem0018example.txt");
 
             var sut = new Problem0018();
 

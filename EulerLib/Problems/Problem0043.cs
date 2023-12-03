@@ -26,5 +26,5 @@ public class Problem0043 : IProblem
                && int.Parse(pandigital.Substring(1, 3)) % 2 == 0;
     }
 
-    public string Md5OfSolution => null;
+    public string Md5OfSolution => "115253b7721af0fdff25cd391dfc70cf";
 }
