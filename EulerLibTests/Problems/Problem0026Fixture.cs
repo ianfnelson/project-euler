@@ -20,7 +20,7 @@ namespace EulerLibTests.Problems
         {
             var sut = new Problem0026();
 
-            var cycleLength = sut.ReciprocalCycleLength(denominator);
+            var cycleLength = Problem0026.ReciprocalCycleLength(denominator);
 
             cycleLength.Should().Be(expectedCycleLength);
         }
@@ -31,7 +31,7 @@ namespace EulerLibTests.Problems
         {
             var sut = new Problem0026();
 
-            var cycleLength = sut.DenominatorWIthMaximumReciprocalCycleLength(maximumDenomator);
+            var cycleLength = Problem0026.DenominatorWIthMaximumReciprocalCycleLength(maximumDenomator);
 
             cycleLength.Should().Be(expectedMaximumCycleLength);
         }

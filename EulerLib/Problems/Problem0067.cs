@@ -20,7 +20,7 @@ namespace EulerLib.Problems
             var filePath = "ContentFiles/problem0067.txt";
 
             var problem18 = new Problem0018();
-            return problem18.MaximumPathThroughTriangle(filePath).ToString();
+            return Problem0018.MaximumPathThroughTriangle(filePath).ToString();
         }
 
         public string Md5OfSolution

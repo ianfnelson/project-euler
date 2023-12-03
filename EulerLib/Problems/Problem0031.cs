@@ -1,43 +1,28 @@
-﻿namespace EulerLib.Problems
+﻿namespace EulerLib.Problems;
+
+public class Problem0031 : IProblem
 {
-    public class Problem0031 : IProblem
+    private static readonly int[] CoinSizes = { 1, 2, 5, 10, 20, 50, 100, 200 };
+    public int Id => 31;
+
+    public string Title => "Coin sums";
+
+    public string Solve()
     {
-        public int Id
-        {
-            get { return 31; }
-        }
+        return WaysOfMaking(200).ToString();
+    }
 
-        public string Title
-        {
-            get { return "Coin sums"; }
-        }
+    public string Md5OfSolution => "142dfe4a33d624d2b830a9257e96726d";
 
-        private static readonly int[] CoinSizes = { 1, 2, 5, 10, 20, 50, 100, 200 };
+    public static int WaysOfMaking(int target)
+    {
+        var ways = new int[target + 1];
+        ways[0] = 1;
 
-        public string Solve()
-        {
-            return WaysOfMaking(200).ToString();
-        }
+        foreach (var t in CoinSizes)
+            for (var j = t; j <= target; j++)
+                ways[j] += ways[j - t];
 
-        public int WaysOfMaking(int target)
-        {
-            var ways = new int[target + 1];
-            ways[0] = 1;
-
-            for (int i = 0; i < CoinSizes.Length; i++)
-            {
-                for (int j = CoinSizes[i]; j <= target; j++)
-                {
-                    ways[j] += ways[j - CoinSizes[i]];
-                }
-            }
-
-            return ways[ways.Length - 1];
-        }
-
-        public string Md5OfSolution
-        {
-            get { return "142dfe4a33d624d2b830a9257e96726d"; }
-        }
+        return ways[^1];
     }
 }

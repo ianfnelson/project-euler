@@ -12,7 +12,7 @@ namespace EulerLibTests.Problems
 
             var sut = new Problem0018();
 
-            var result = sut.MaximumPathThroughTriangle(file);
+            var result = Problem0018.MaximumPathThroughTriangle(file);
 
             result.Should().Be(23);
         }

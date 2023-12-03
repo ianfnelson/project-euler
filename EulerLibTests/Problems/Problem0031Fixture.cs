@@ -17,7 +17,7 @@ namespace EulerLibTests.Problems
         {
             var sut = new Problem0031();
 
-            var ways = sut.WaysOfMaking(n);
+            var ways = Problem0031.WaysOfMaking(n);
 
             ways.Should().Be(expectedWays);
         }
