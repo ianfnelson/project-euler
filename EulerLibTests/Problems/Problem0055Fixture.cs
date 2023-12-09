@@ -21,7 +21,7 @@ namespace EulerLibTests.Problems
         {
             var sut = new Problem0055();
 
-            var actual = sut.IsLychrel(n);
+            var actual = Problem0055.IsLychrel(n);
 
             actual.Should().Be(expectedValue);
         }

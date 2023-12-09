@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using EulerLib.Extensions;
+﻿using EulerLib.Extensions;
 
 namespace EulerLib.Problems
 {

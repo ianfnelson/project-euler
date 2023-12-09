@@ -1,32 +1,19 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using EulerLib.Poker;
+﻿using EulerLib.Poker;
 
 namespace EulerLib.Problems
 {
     public class Problem0054 : IProblem
     {
-        public int Id
-        {
-            get { return 54; }
-        }
+        public int Id => 54;
 
-        public string Title
-        {
-            get { return "Poker hands"; }
-        }
+        public string Title => "Poker hands";
 
         public string Solve()
         {
             return CountPlayer1WinsInFile("ContentFiles/problem0054.txt").ToString();
         }
 
-        public string Md5OfSolution
-        {
-            get { return "142949df56ea8ae0be8b5306971900a4"; }
-        }
+        public string Md5OfSolution => "142949df56ea8ae0be8b5306971900a4";
 
         public int CountPlayer1WinsInFile(string filePath)
         {

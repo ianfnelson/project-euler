@@ -1,12 +1,11 @@
 ﻿using EulerLib.Extensions;
 
-namespace EulerLib.Sequences
+namespace EulerLib.Sequences;
+
+public class AbundantNumbers : NaiveSequenceGeneratorBase
 {
-    public class AbundantNumbers : NaiveSequenceGeneratorBase
+    public override bool IntegerIsMemberOfSequence(long n)
     {
-        public override bool IntegerIsMemberOfSequence(long n)
-        {
-            return n.IsAbundant();
-        }
+        return n.IsAbundant();
     }
 }

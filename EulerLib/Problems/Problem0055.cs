@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Numerics;
+﻿using System.Numerics;
 using EulerLib.Extensions;
 
 namespace EulerLib.Problems
@@ -13,19 +12,19 @@ namespace EulerLib.Problems
             return LychrelNumbersBelowN(10000).ToString();
         }
 
-        public int LychrelNumbersBelowN(int n)
+        public static int LychrelNumbersBelowN(int n)
         {
             return Enumerable.Range(1, n-1).Count(IsLychrel);
         }
 
-        public bool IsLychrel(int n)
+        public static bool IsLychrel(int n)
         {
-            int iterations = 0;
-            BigInteger bigN = new BigInteger(n);
+            var iterations = 0;
+            var bigN = new BigInteger(n);
 
             while (iterations < 50)
             {
-                bigN = bigN + bigN.Reverse();
+                bigN += bigN.Reverse();
 
                 if (bigN.IsPalindromic()) return false;
 

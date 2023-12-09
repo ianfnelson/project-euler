@@ -1,79 +1,57 @@
-using System;
+namespace EulerLib.Poker;
 
-namespace EulerLib.Poker
+public class Card
 {
-    public class Card
+    private Card(Value value, Suit suit)
     {
-        public Card(Value value, Suit suit)
+        Suit = suit;
+        Value = value;
+    }
+
+    public Suit Suit { get; private set; }
+
+    public Value Value { get; private set; }
+
+    public static Card Parse(string input)
+    {
+        if (input is not { Length: 2 }) throw new ArgumentException("Must be two characters", nameof(input));
+
+        var value = ParseValue(input[0]);
+        var suit = ParseSuit(input[1]);
+
+        return new Card(value, suit);
+    }
+
+    private static Value ParseValue(char input)
+    {
+        return input switch
         {
-            Suit = suit;
-            Value = value;
-        }
+            'A' => Value.Ace,
+            '2' => Value.Two,
+            '3' => Value.Three,
+            '4' => Value.Four,
+            '5' => Value.Five,
+            '6' => Value.Six,
+            '7' => Value.Seven,
+            '8' => Value.Eight,
+            '9' => Value.Nine,
+            'T' => Value.Ten,
+            'J' => Value.Jack,
+            'Q' => Value.Queen,
+            'K' => Value.King,
+            _ => throw new ArgumentException($"Cannot parse Value '{input}'", nameof(input))
+        };
+    }
 
-        public Suit Suit { get; private set; }
-
-        public Value Value { get; private set; }
-
-        public static Card Parse(string input)
+    private static Suit ParseSuit(char input)
+    {
+        return input switch
         {
-            if (input == null || input.Length != 2) throw new ArgumentException("Must be two characters", "input");
-
-            var value = ParseValue(input[0]);
-            var suit = ParseSuit(input[1]);
-
-            return new Card(value, suit);
-        }
-
-        private static Value ParseValue(char input)
-        {
-            switch (input)
-            {
-                case 'A':
-                    return Value.Ace;
-                case '2':
-                    return Value.Two;
-                case '3':
-                    return Value.Three;
-                case '4':
-                    return Value.Four;
-                case '5':
-                    return Value.Five;
-                case '6':
-                    return Value.Six;
-                case '7':
-                    return Value.Seven;
-                case '8':
-                    return Value.Eight;
-                case '9':
-                    return Value.Nine;
-                case 'T':
-                    return Value.Ten;
-                case 'J':
-                    return Value.Jack;
-                case 'Q':
-                    return Value.Queen;
-                case 'K':
-                    return Value.King;
-            }
-
-            throw new ArgumentException(string.Format("Cannot parse Value '{0}'", input), "input");
-        }
-
-        private static Suit ParseSuit(char input)
-        {
-            switch (input)
-            {
-                case 'C':
-                    return Suit.Clubs;
-                case 'D':
-                    return Suit.Diamonds;
-                case 'H':
-                    return Suit.Hearts;
-                case 'S':
-                    return Suit.Spades;
-            }
-
-            throw new ArgumentException(string.Format("Cannot parse Suit '{0}'", input), "input");
-        }
+            'C' => Suit.Clubs,
+            'D' => Suit.Diamonds,
+            'H' => Suit.Hearts,
+            'S' => Suit.Spades,
+            _ => throw new ArgumentException($"Cannot parse Suit '{input}'", nameof(input))
+        };
     }
 }

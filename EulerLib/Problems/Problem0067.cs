@@ -1,31 +1,18 @@
-﻿using System.IO;
-using System.Reflection;
+﻿namespace EulerLib.Problems;
 
-namespace EulerLib.Problems
+public class Problem0067 : IProblem
 {
-    public class Problem0067 : IProblem
+    public int Id => 67;
+
+    public string Title => "Maximum path sum II";
+
+    public string Solve()
     {
-        public int Id
-        {
-            get { return 67; }
-        }
+        var filePath = "ContentFiles/problem0067.txt";
 
-        public string Title
-        {
-            get { return "Maximum path sum II"; }
-        }
-
-        public string Solve()
-        {
-            var filePath = "ContentFiles/problem0067.txt";
-
-            var problem18 = new Problem0018();
-            return Problem0018.MaximumPathThroughTriangle(filePath).ToString();
-        }
-
-        public string Md5OfSolution
-        {
-            get { return "9d702ffd99ad9c70ac37e506facc8c38"; }
-        }
+        var problem18 = new Problem0018();
+        return Problem0018.MaximumPathThroughTriangle(filePath).ToString();
     }
+
+    public string Md5OfSolution => "9d702ffd99ad9c70ac37e506facc8c38";
 }

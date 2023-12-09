@@ -1,12 +1,11 @@
 ﻿using EulerLib.Extensions;
 
-namespace EulerLib.Sequences
+namespace EulerLib.Sequences;
+
+public class PerfectNumbers : NaiveSequenceGeneratorBase
 {
-    public class PerfectNumbers : NaiveSequenceGeneratorBase
+    public override bool IntegerIsMemberOfSequence(long n)
     {
-        public override bool IntegerIsMemberOfSequence(long n)
-        {
-            return n.IsPerfect();
-        }
+        return n.IsPerfect();
     }
 }

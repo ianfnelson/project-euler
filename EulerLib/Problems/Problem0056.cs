@@ -1,39 +1,37 @@
-﻿using System.Linq;
-using System.Numerics;
+﻿using System.Numerics;
 using EulerLib.Extensions;
 
-namespace EulerLib.Problems
+namespace EulerLib.Problems;
+
+public class Problem0056 : IProblem
 {
-    public class Problem0056 : IProblem
+    public int Id => 56;
+    public string Title => "Powerful Digital Sum";
+    public string Solve()
     {
-        public int Id => 56;
-        public string Title => "Powerful Digital Sum";
-        public string Solve()
+        var maxPowerDigitalSum = 0;
+
+        for (int a = 1; a < 100; a++)
         {
-            int maxPowerDigitalSum = 0;
+            BigInteger running = a;
+            int b = 1;
 
-            for (int a = 1; a < 100; a++)
+            do
             {
-                BigInteger running = a;
-                int b = 1;
-
-                do
+                int powerDigitalSum = (int)running.SumOfDigits();
+                if (powerDigitalSum > maxPowerDigitalSum)
                 {
-                    int powerDigitalSum = (int)running.SumOfDigits();
-                    if (powerDigitalSum > maxPowerDigitalSum)
-                    {
-                        maxPowerDigitalSum = powerDigitalSum;
-                    }
+                    maxPowerDigitalSum = powerDigitalSum;
+                }
 
-                    b++;
-                    running = running * a;
-                } while (b<=100);
+                b++;
+                running *= a;
+            } while (b<=100);
 
-            }
-            return maxPowerDigitalSum.ToString();
         }
-
-        public string Md5OfSolution => "c22abfa379f38b5b0411bc11fa9bf92f";
-
+        return maxPowerDigitalSum.ToString();
     }
+
+    public string Md5OfSolution => "c22abfa379f38b5b0411bc11fa9bf92f";
+
 }

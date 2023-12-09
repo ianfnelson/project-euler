@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace EulerLib.Sequences
+﻿namespace EulerLib.Sequences
 {
     public interface ISequenceGenerator<T>
     {

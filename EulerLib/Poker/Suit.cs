@@ -1,10 +1,9 @@
-namespace EulerLib.Poker
+namespace EulerLib.Poker;
+
+public enum Suit
 {
-    public enum Suit
-    {
-        Clubs,
-        Hearts,
-        Spades,
-        Diamonds
-    }
+    Clubs,
+    Hearts,
+    Spades,
+    Diamonds
 }

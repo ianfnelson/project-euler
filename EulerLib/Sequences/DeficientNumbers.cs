@@ -1,13 +1,12 @@
 ﻿using EulerLib.Extensions;
 
-namespace EulerLib.Sequences
+namespace EulerLib.Sequences;
+
+public class DeficientNumbers
+    : NaiveSequenceGeneratorBase
 {
-    public class DeficientNumbers
-        : NaiveSequenceGeneratorBase
+    public override bool IntegerIsMemberOfSequence(long n)
     {
-        public override bool IntegerIsMemberOfSequence(long n)
-        {
-            return n.IsDeficient();
-        }
+        return n.IsDeficient();
     }
 }

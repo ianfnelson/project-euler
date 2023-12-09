@@ -1,30 +1,29 @@
 ﻿using System.Globalization;
 using System.Numerics;
 
-namespace EulerLib.Extensions
+namespace EulerLib.Extensions;
+
+public static class BigIntegerExtensions
 {
-    public static class BigIntegerExtensions
+    public static BigInteger SumOfDigits(this BigInteger value)
     {
-        public static BigInteger SumOfDigits(this BigInteger value)
+        BigInteger sum = 0;
+        while (value != BigInteger.Zero)
         {
-            BigInteger sum = 0;
-            while (value != BigInteger.Zero)
-            {
-                sum += value % 10;
-                value /= 10;
-            }
-
-            return sum;
+            sum += value % 10;
+            value /= 10;
         }
 
-        public static BigInteger Reverse(this BigInteger n)
-        {
-            var stringyN = n.ToString(CultureInfo.InvariantCulture);
+        return sum;
+    }
 
-            var reverseStringyN = stringyN.ReverseString();
+    public static BigInteger Reverse(this BigInteger n)
+    {
+        var stringyN = n.ToString(CultureInfo.InvariantCulture);
 
-            return BigInteger.Parse(reverseStringyN);
+        var reverseStringyN = stringyN.ReverseString();
 
-        }
+        return BigInteger.Parse(reverseStringyN);
+
     }
 }

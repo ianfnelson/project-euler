@@ -1,6 +1,4 @@
 ﻿using EulerLib.Extensions;
-using FluentAssertions;
-using NUnit.Framework;
 
 namespace EulerLibTests.Extensions
 {

@@ -1,4 +1,4 @@
-namespace EulerLib.Extensions;
+namespace EulerLib.Sets;
 
 public interface ISetGenerator
 {

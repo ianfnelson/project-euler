@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace EulerLib.Sequences
+﻿namespace EulerLib.Sequences
 {
     public abstract class SequenceGeneratorBase : ISequenceGenerator<long>
     {

@@ -1,33 +1,26 @@
-﻿namespace EulerLib.Problems
+﻿namespace EulerLib.Problems;
+
+public class Problem0029 : IProblem
 {
-    public class Problem0029 : IProblem
+    public int Id => 29;
+
+    public string Title => "Distinct Powers";
+
+    public string Solve()
     {
-        public int Id
-        {
-            get { return 29; }
-        }
+        return CountDistinctPowersThrough(100).ToString();
+    }
 
-        public string Title
-        {
-            get { return "Distinct Powers"; }
-        }
+    public int CountDistinctPowersThrough(int n)
+    {
+        return 0;
+        // TODO
+        // return new EulerLibFSharp.Problem0029().distinctPowers(n);
+    }
 
-        public string Solve()
-        {
-            return CountDistinctPowersThrough(100).ToString();
-        }
-
-        public int CountDistinctPowersThrough(int n)
-        {
-            return 0;
-            // TODO
-            // return new EulerLibFSharp.Problem0029().distinctPowers(n);
-        }
-
-        public string Md5OfSolution
-        {
-            // get { return "6f0ca67289d79eb35d19decbc0a08453"; }
-            get { return null; }
-        }
+    public string Md5OfSolution
+    {
+        // get { return "6f0ca67289d79eb35d19decbc0a08453"; }
+        get { return null; }
     }
 }
