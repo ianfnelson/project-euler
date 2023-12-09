@@ -19,5 +19,5 @@ public class Problem0020 : IProblem
         return x.SumOfDigits().ToString();
     }
 
-    public string Md5OfSolution { get; }
+    public string Md5OfSolution => "443cb001c138b2561a0d90720d6ce111";
 }
