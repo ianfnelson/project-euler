@@ -6,15 +6,17 @@ using EulerLib;
 using EulerLib.Extensions;
 
 var problems = GetProblems(args);
+var solutions = problems.Select(problem => new Tuple<IProblem, long>(problem, Solve(problem))).ToList();
 
-foreach (var problem in problems)
+Console.WriteLine("Slowest solutions:");
+foreach (var slowSolution in solutions.OrderByDescending(x => x.Item2).Take(5))
 {
-    Solve(problem);
+    Console.WriteLine("Problem ID {0} - {1:n0} ms", slowSolution.Item1.Id, slowSolution.Item2);
 }
 
 return;
 
-void Solve(IProblem problem)
+long Solve(IProblem problem)
 {
     Console.WriteLine("Problem ID:      {0}", problem.Id);
     Console.WriteLine("Title:           {0}", problem.Title);
@@ -28,8 +30,10 @@ void Solve(IProblem problem)
 
     Console.WriteLine("Solution:        {0}", solution);
     Console.WriteLine("MD5 of solution: {0}", solution.ToMd5Hash());
-    Console.WriteLine("Execution Time:  {0:n0} milliseconds", sw.ElapsedMilliseconds);
+    Console.WriteLine("Execution Time:  {0:n0} ms", sw.ElapsedMilliseconds);
     Console.WriteLine("");
+
+    return sw.ElapsedMilliseconds;
 }
 
 static IEnumerable<IProblem> GetProblems(string[] args)
@@ -46,8 +50,7 @@ static IEnumerable<IProblem> GetProblems(string[] args)
             .Select(x => (IProblem) Activator.CreateInstance(x));
     }
 
-    int problemId;
-    if (!int.TryParse(args[0], out problemId))
+    if (!int.TryParse(args[0], out var problemId))
     {
         Console.WriteLine(
             "'{0}' is not a valid integer. Please pass the integer ID of the problem to be solved", args[0]);
@@ -62,7 +65,7 @@ static IEnumerable<IProblem> GetProblems(string[] args)
     }
     
     IProblem problem;
-    var typeName = string.Format("Problem{0:0000}", problemId);
+    var typeName = $"Problem{problemId:0000}";
 
     try
     {
