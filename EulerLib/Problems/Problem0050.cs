@@ -7,41 +7,35 @@ public class Problem0050 : IProblem
     public int Id => 50;
     public string Title => "Consecutive Prime Sum";
 
-    private static readonly HashSet<long> Primes = new();
+    private static HashSet<long> PrimesHashSet = new();
+    private static List<long> PrimesList = new();
     
     public string Solve()
     {
-        foreach (var prime in new PrimeNumbers().GenerateToMaximumValue(1000000))
-        {
-            Primes.Add(prime);
-        }
+        const long maxValue = 1000000L;
+        PrimesList = new PrimeNumbers().GenerateToMaximumValue(maxValue).ToList();
+        PrimesHashSet = PrimesList.ToHashSet();
 
-        var currentTerms = 0;
-        var maxPrime = Primes.Last();
-        var winner = 0L;
-        
-        for (int i = 0; i < Primes.Count; i++)
-        {
-            var j = i;
-            var runningTotal = 0L;
-            var terms = 0;
+        var maxSum = 953L;
+        var termsCount = 21;
 
-            while (j < Primes.Count && runningTotal < maxPrime)
+        for (int i = 0; i < PrimesList.Count; i++)
+        {
+            long tempSum = 0L;
+            for (int j = i; j < PrimesList.Count; j++)
             {
-                runningTotal += Primes.ElementAt(j);
-                terms++;
+                tempSum += PrimesList[j];
+                if (tempSum > maxValue) break;
 
-                if (terms > currentTerms && Primes.Contains(runningTotal))
+                if (j - i + 1 > termsCount && PrimesHashSet.Contains(tempSum))
                 {
-                    currentTerms = terms;
-                    winner = runningTotal;
+                    termsCount = j - i + 1;
+                    maxSum = tempSum;
                 }
-
-                j++;
             }
         }
 
-        return winner.ToString();
+        return maxSum.ToString();
     }
 
     public string Md5OfSolution => "73229bab6c5dc1c7cf7a4fa123caf6bc";
