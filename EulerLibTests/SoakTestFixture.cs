@@ -35,11 +35,10 @@ namespace EulerLibTests
                 }
             }
 
-            if (failures.Any())
+            if (failures.Count != 0)
             {
                 Assert.Fail(string.Join(Environment.NewLine, failures));
             }
-
         }
     }
 }

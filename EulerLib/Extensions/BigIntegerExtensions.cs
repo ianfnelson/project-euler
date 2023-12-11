@@ -24,6 +24,10 @@ public static class BigIntegerExtensions
         var reverseStringyN = stringyN.ReverseString();
 
         return BigInteger.Parse(reverseStringyN);
+    }
 
+    public static int Digits(this BigInteger value)
+    {
+        return value.ToString().Length;
     }
 }

@@ -18,5 +18,5 @@ public class Problem0041 : IProblem
             .ToString();
     }
 
-    public string Md5OfSolution => "7652413";
+    public string Md5OfSolution => "d0a1bd6ab4229b2d0754be8923431404";
 }
