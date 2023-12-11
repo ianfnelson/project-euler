@@ -13,6 +13,8 @@ foreach (var slowSolution in solutions.OrderByDescending(x => x.Item2).Take(5))
 {
     Console.WriteLine("Problem ID {0} - {1:n0} ms", slowSolution.Item1.Id, slowSolution.Item2);
 }
+Console.WriteLine("");
+Console.WriteLine("Mean solution time: {0:n0} ms", solutions.Average(x => x.Item2));
 
 return;
 
