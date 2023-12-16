@@ -1,4 +1,6 @@
-﻿namespace EulerLib.Problems;
+﻿using System.Numerics;
+
+namespace EulerLib.Problems;
 
 public class Problem0029 : IProblem
 {
@@ -11,16 +13,20 @@ public class Problem0029 : IProblem
         return CountDistinctPowersThrough(100).ToString();
     }
 
-    public int CountDistinctPowersThrough(int n)
+    public static int CountDistinctPowersThrough(int n)
     {
-        return 0;
-        // TODO
-        // return new EulerLibFSharp.Problem0029().distinctPowers(n);
+        var terms = new HashSet<BigInteger>();
+
+        for (BigInteger a = 2; a <= n; a++)
+        {
+            for (var b = 2; b <= n; b++)
+            {
+                terms.Add(BigInteger.Pow(a,b));
+            }
+        }
+
+        return terms.Count;
     }
 
-    public string Md5OfSolution
-    {
-        // get { return "6f0ca67289d79eb35d19decbc0a08453"; }
-        get { return null; }
-    }
+    public string Md5OfSolution => "6f0ca67289d79eb35d19decbc0a08453";
 }
