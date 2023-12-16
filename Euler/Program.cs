@@ -32,7 +32,7 @@ long Solve(IProblem problem)
 
     Console.WriteLine("Solution:        {0}", solution);
     Console.WriteLine("MD5 of solution: {0}", solution.ToMd5Hash());
-    Console.WriteLine("Execution Time:  {0:n0} ms", sw.ElapsedMilliseconds);
+    Console.WriteLine("Execution Time:  {0:n0} ms ; {1:n0} ticks", sw.ElapsedMilliseconds, sw.ElapsedTicks);
     Console.WriteLine("");
 
     return sw.ElapsedMilliseconds;
