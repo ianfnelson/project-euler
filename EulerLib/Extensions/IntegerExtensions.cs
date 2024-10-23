@@ -32,4 +32,21 @@ public static class IntegerExtensions
             number /= 10;
         }
     }
+
+    public static IEnumerable<int> DigitRotations(this int number)
+    {
+        return number.DigitRotationsWithDuplicates().Distinct();
+    }
+
+    private static IEnumerable<int> DigitRotationsWithDuplicates(this int number)
+    {
+        yield return number;
+        
+        var stringed = number.ToString();
+
+        for (var i = 1; i < stringed.Length; i++)
+        {
+            yield return Convert.ToInt32(stringed[i..] + stringed[..i]);
+        }
+    }
 }

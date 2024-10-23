@@ -1,7 +1,4 @@
-﻿using System.Numerics;
-using EulerLib.Extensions;
-using FluentAssertions;
-using NUnit.Framework;
+﻿using EulerLib.Extensions;
 
 namespace EulerLibTests.Extensions
 {
@@ -17,6 +14,30 @@ namespace EulerLibTests.Extensions
             var result = n.Factorial();
 
             result.ToString().Should().Be(expectedFactorial);
+        }
+
+        [Test]
+        public void DigitRotationsTest2845()
+        {
+            var result = 2845.DigitRotations().ToList();
+
+            result.Should().BeEquivalentTo([2845, 8452, 4528, 5284]);
+        }
+
+        [Test]
+        public void DigitRotationsTest197()
+        {
+            var result = 197.DigitRotations().ToList();
+
+            result.Should().BeEquivalentTo([197, 971, 719]);
+        }
+        
+        [Test]
+        public void DigitRotationsTest111()
+        {
+            var result = 111.DigitRotations().ToList();
+
+            result.Should().BeEquivalentTo([111]);
         }
     }
 }
