@@ -1,19 +1,10 @@
-﻿using AutoFixture;
-using EulerLib.Poker;
+﻿using EulerLib.Poker;
 
 namespace EulerLibTests.Poker;
 
 [TestFixture]
 public class HandFixture
 {
-    [SetUp]
-    public void SetUp()
-    {
-        fixture = new Fixture();
-    }
-
-    private static IFixture fixture;
-
     [TestCase("9D 9C AS AH AC")]
     [TestCase("2D 8C 2H 8S 2S")]
     public void CanIdentifyFullHouse(string input)
@@ -340,7 +331,7 @@ public class HandFixture
     [Test]
     public void ConstructorThrowsIfNoCardsPassed()
     {
-        var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new Hand(new Card[] {}));
+        var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new Hand([]));
 
         ex.ParamName.Should().Be("cards");
     }
