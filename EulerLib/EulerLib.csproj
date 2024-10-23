@@ -37,4 +37,8 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Fractions" Version="7.3.0" />
+    </ItemGroup>
+
 </Project>
