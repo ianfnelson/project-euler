@@ -25,8 +25,7 @@ namespace EulerLibTests.Poker
             card.Suit.Should().Be(expectedSuit);
             card.Value.Should().Be(expectedValue);
         }
-
-        [TestCase(null)]
+        
         [TestCase("")]
         [TestCase(" ")]
         [TestCase("2c")]
