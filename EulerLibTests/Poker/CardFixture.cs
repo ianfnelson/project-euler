@@ -1,7 +1,4 @@
-﻿using System;
-using EulerLib.Poker;
-using FluentAssertions;
-using NUnit.Framework;
+﻿using EulerLib.Poker;
 
 namespace EulerLibTests.Poker
 {
