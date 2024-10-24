@@ -16,7 +16,7 @@ public class Problem0033 : IProblem
             product = product.Multiply(fraction);
         }
 
-        return product.Denominator.ToString();
+        return product.Reduce().Denominator.ToString();
     }   
 
     private static IEnumerable<Fraction> GetTrialFractions()
@@ -49,7 +49,7 @@ public class Problem0033 : IProblem
         
         var newFraction = new Fraction(newNumerator, newDenominator);
         
-        return fraction.IsEquivalentTo(newFraction);
+        return fraction.Equals(newFraction);
     }
 
     public string Md5OfSolution => "f899139df5e1059396431415e770c6dd";
