@@ -22,7 +22,7 @@ public class SoakTestFixture
 
         var failures = new List<string>();
 
-        foreach (var problem in problems.Where(x => x.Md5OfSolution != null))
+        foreach (var problem in problems)
         {
             var solution = problem.Solve();
 
