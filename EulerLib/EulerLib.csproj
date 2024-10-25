@@ -35,6 +35,10 @@
       <Content Include="ContentFiles\problem0042.txt">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </Content>
+      <None Remove="ContentFiles\problem0099.txt" />
+      <Content Include="ContentFiles\problem0099.txt">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
     </ItemGroup>
 
     <ItemGroup>
