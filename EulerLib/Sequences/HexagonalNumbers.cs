@@ -1,6 +1,6 @@
-﻿namespace EulerLib.Sequences;
+namespace EulerLib.Sequences;
 
-public class TriangularNumbers : SequenceGeneratorBase
+public class HexagonalNumbers : SequenceGeneratorBase
 {
     public override IEnumerable<long> Generate()
     {
@@ -10,7 +10,7 @@ public class TriangularNumbers : SequenceGeneratorBase
         do
         {
             tot += a;
-            a++;
+            a+=4;
             yield return tot;
         } while (true);
     }
