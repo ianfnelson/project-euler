@@ -39,5 +39,5 @@ public class Problem0044 : IProblem
         return minimalDifference.ToString();
     }
 
-    public string Md5OfSolution { get; }
+    public string Md5OfSolution => "2c2556cb85621309ca647465ffa62370";
 }
