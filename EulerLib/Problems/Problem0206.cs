@@ -27,5 +27,5 @@ public class Problem0206 : IProblem
         } while (true);
     }
 
-    public string Md5OfSolution { get; }
+    public string Md5OfSolution => "09f9d87cb4b1ebb34e1f607e55a351d8";
 }
