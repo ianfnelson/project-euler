@@ -17,7 +17,7 @@ public class Game
     {
         _diceSides = diceSides;
         
-        _frequencies = Enumerable.Range(0,40).ToDictionary(x => x, x => 0);
+        _frequencies = Enumerable.Range(0,40).ToDictionary(x => x, _ => 0);
         
         Enumerable.Range(1, 16)
             .OrderBy(_ => _random.Next())

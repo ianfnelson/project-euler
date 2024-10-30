@@ -60,7 +60,7 @@ static IEnumerable<IProblem> GetProblems(string[] args)
         return new List<IProblem>();
     }
     
-    if (problemId < 1 || problemId > 9999)
+    if (problemId is < 1 or > 9999)
     {
         Console.WriteLine("'{0}' is out of range. Please pass the integer ID of the problem to be solved",
             args[0]);

@@ -349,7 +349,7 @@ public class HandFixture
     {
         for (var i = 1; i < 5; i++)
         {
-            var cards = Enumerable.Range(1,i).Select(x => Card.Parse("2H"));
+            var cards = Enumerable.Range(1,i).Select(_ => Card.Parse("2H"));
 
             var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new Hand(cards));
 
@@ -362,7 +362,7 @@ public class HandFixture
     {
         for (var i = 6; i < 10; i++)
         {
-            var cards = Enumerable.Range(1,i).Select(x => Card.Parse("2H"));
+            var cards = Enumerable.Range(1,i).Select(_ => Card.Parse("2H"));
 
             var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new Hand(cards));
 

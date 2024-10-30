@@ -8,9 +8,8 @@ public class Problem0067 : IProblem
 
     public string Solve()
     {
-        var filePath = "ContentFiles/problem0067.txt";
+        const string filePath = "ContentFiles/problem0067.txt";
 
-        var problem18 = new Problem0018();
         return Problem0018.MaximumPathThroughTriangle(filePath).ToString();
     }
 

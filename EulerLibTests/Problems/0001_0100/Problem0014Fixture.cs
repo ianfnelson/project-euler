@@ -1,6 +1,4 @@
 ﻿using EulerLib.Problems;
-using FluentAssertions;
-using NUnit.Framework;
 
 namespace EulerLibTests.Problems
 {

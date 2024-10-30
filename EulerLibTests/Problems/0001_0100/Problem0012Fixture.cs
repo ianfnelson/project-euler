@@ -1,7 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-using EulerLib.Problems;
-using FluentAssertions;
-using NUnit.Framework;
+﻿using EulerLib.Problems;
 
 namespace EulerLibTests.Problems
 {

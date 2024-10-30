@@ -21,11 +21,4 @@ public class GameTests
 
         modalString.Should().Be("102400");
     }
-
-    private static double SquarePercent(Dictionary<int, int> frequencies, int squareIndex)
-    {
-        var total = Convert.ToDouble(frequencies.Values.Sum());
-        
-        return 100 * frequencies[squareIndex] / total;
-    }
 }

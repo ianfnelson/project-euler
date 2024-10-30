@@ -1,5 +1,3 @@
-using System.Text;
-
 namespace EulerLib.Problems;
 
 public class Problem0017 : IProblem

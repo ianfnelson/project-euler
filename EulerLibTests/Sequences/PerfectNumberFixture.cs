@@ -1,20 +1,16 @@
-﻿using System;
-using System.Linq;
-using EulerLib.Sequences;
-using NUnit.Framework;
+﻿using EulerLib.Sequences;
 
-namespace EulerLibTests.Sequences
+namespace EulerLibTests.Sequences;
+
+[TestFixture]
+public class PerfectNumbersFixture
 {
-    [TestFixture]
-    public class PerfectNumbersFixture
+    [TestCase(0, 6)]
+    [TestCase(1, 28)]
+    public void AbundantsTestCases(int index, int value)
     {
-        [TestCase(0, 6)]
-        [TestCase(1, 28)]
-        public void AbundantsTestCases(int index, int value)
-        {
-            var sequence = new PerfectNumbers().GenerateToMaximumSize(2);
+        var sequence = new PerfectNumbers().GenerateToMaximumSize(2);
 
-            Assert.That(sequence.ElementAt(index), Is.EqualTo(value));
-        }
+        Assert.That(sequence.ElementAt(index), Is.EqualTo(value));
     }
 }

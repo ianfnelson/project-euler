@@ -7,27 +7,27 @@ public class Problem0050 : IProblem
     public int Id => 50;
     public string Title => "Consecutive Prime Sum";
 
-    private static HashSet<long> PrimesHashSet = new();
-    private static List<long> PrimesList = new();
+    private static HashSet<long> _primesHashSet = [];
+    private static List<long> _primesList = [];
     
     public string Solve()
     {
         const long maxValue = 1000000L;
-        PrimesList = new PrimeNumbers().GenerateToMaximumValue(maxValue).ToList();
-        PrimesHashSet = PrimesList.ToHashSet();
+        _primesList = new PrimeNumbers().GenerateToMaximumValue(maxValue).ToList();
+        _primesHashSet = _primesList.ToHashSet();
 
         var maxSum = 953L;
         var termsCount = 21;
 
-        for (int i = 0; i < PrimesList.Count; i++)
+        for (int i = 0; i < _primesList.Count; i++)
         {
             long tempSum = 0L;
-            for (int j = i; j < PrimesList.Count; j++)
+            for (int j = i; j < _primesList.Count; j++)
             {
-                tempSum += PrimesList[j];
+                tempSum += _primesList[j];
                 if (tempSum > maxValue) break;
 
-                if (j - i + 1 > termsCount && PrimesHashSet.Contains(tempSum))
+                if (j - i + 1 > termsCount && _primesHashSet.Contains(tempSum))
                 {
                     termsCount = j - i + 1;
                     maxSum = tempSum;
