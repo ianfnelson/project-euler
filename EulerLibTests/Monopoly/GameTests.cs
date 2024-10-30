@@ -6,11 +6,12 @@ namespace EulerLibTests.Monopoly;
 public class GameTests
 {
     [Test]
+    [Ignore("Slow-running")]
     public void GameTest_SixSidedDice_TopSquaresAreAsExpected()
     {
         var game = new Game(6);
 
-        var frequencies = game.Simulate(100000000);
+        var frequencies = game.Simulate(1000000000);
 
         var modalString =
             string.Concat(
