@@ -7,6 +7,7 @@ public class Hand : IComparable<Hand>
         if (cards == null) throw new ArgumentNullException(nameof(cards));
 
         Cards = new List<Card>(cards.ToList());
+        ValuesList = new List<Value>();
 
         if (Cards.Count != 5)
             throw new ArgumentOutOfRangeException(nameof(cards),
@@ -22,9 +23,9 @@ public class Hand : IComparable<Hand>
 
     public IList<Value> ValuesList { get; private set; }
 
-    public int CompareTo(Hand other)
+    public int CompareTo(Hand? other)
     {
-        if (Ranking > other.Ranking)
+        if (Ranking > other!.Ranking)
         {
             return 1;
         }

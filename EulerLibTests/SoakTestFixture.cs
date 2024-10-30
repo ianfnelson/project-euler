@@ -11,14 +11,13 @@ public class SoakTestFixture
     public void RunAllSolvedProblems()
     {
         // Get All Problems
-        var problemType = typeof(IProblem);
         var problems = Assembly
-            .GetAssembly(problemType)
+            .GetAssembly(typeof(IProblem))!
             .GetTypes()
-            .Where(problemType.IsAssignableFrom)
+            .Where(typeof(IProblem).IsAssignableFrom)
             .Where(t => t.IsClass)
-            .OrderBy(x => x.Name)
-            .Select(x => (IProblem)Activator.CreateInstance(x));
+            .OrderBy(t => t.Name)
+            .Select(t => (IProblem)Activator.CreateInstance(t)!);
 
         var failures = new List<string>();
 
@@ -30,8 +29,7 @@ public class SoakTestFixture
             if (!md5OfSolution.Equals(problem.Md5OfSolution))
             {
                 failures.Add(
-                    string.Format("Problem {0} is not returning the expected solution (expected {1} found {2})",
-                        problem.Id, problem.Md5OfSolution, md5OfSolution));
+                    $"Problem {problem.Id} is not returning the expected solution (expected {problem.Md5OfSolution} found {md5OfSolution})");
             }
         }
 
