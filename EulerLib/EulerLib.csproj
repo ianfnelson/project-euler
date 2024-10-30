@@ -45,4 +45,8 @@
       <PackageReference Include="Fractions" Version="8.0.4" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Problems\0101_0200\" />
+    </ItemGroup>
+
 </Project>

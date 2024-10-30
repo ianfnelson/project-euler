@@ -77,4 +77,8 @@
       <Private>True</Private>
     </Reference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Problems\0101_0200\" />
+    <Folder Include="Problems\0201_0300\" />
+  </ItemGroup>
 </Project>

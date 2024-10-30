@@ -10,7 +10,7 @@ public class Problem0084 : IProblem
     {
         var game = new Game(4);
         
-        var frequencies = game.Simulate(10000000);
+        var frequencies = game.Simulate(20000000);
 
         var modalString =
             string.Concat(
