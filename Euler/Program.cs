@@ -3,7 +3,7 @@ using System.Reflection;
 using EulerLib;
 using EulerLib.Extensions;
 
-var problems = GetProblems(args);
+var problems = GetProlems(args);
 var solutions = problems.Select(problem => new Tuple<IProblem, long>(problem, Solve(problem))).ToList();
 
 if (solutions.Any())
