@@ -54,7 +54,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Fractions" Version="8.1.1" />
+      <PackageReference Include="Fractions" Version="8.2.0" />
     </ItemGroup>
 
     <ItemGroup>
