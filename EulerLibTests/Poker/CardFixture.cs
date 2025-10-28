@@ -1,4 +1,5 @@
 ﻿using EulerLib.Poker;
+using Value = EulerLib.Poker.Value;
 
 namespace EulerLibTests.Poker;
 
