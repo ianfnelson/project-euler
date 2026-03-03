@@ -2,12 +2,12 @@
 
 namespace EulerLibTests.Problems
 {
-    [TestFixture]
     public class Problem0014Fixture
     {
-        [TestCase(2)]
-        [TestCase(5)]
-        [TestCase(50)]
+        [Theory]
+        [InlineData(2)]
+        [InlineData(5)]
+        [InlineData(50)]
         public void CollatzChainTerms_EntryForEachIntegerAboveTwo(int maximumStartingNumber)
         {
             // Arrange
@@ -20,7 +20,8 @@ namespace EulerLibTests.Problems
             terms.Count.Should().Be(maximumStartingNumber - 1);
         }
 
-        [TestCase(13,10)]
+        [Theory]
+        [InlineData(13,10)]
         public void CollatzChainTerms_ContainsExpectedResults(int startingNumber, int expectedTerms)
         {
             // Arrange

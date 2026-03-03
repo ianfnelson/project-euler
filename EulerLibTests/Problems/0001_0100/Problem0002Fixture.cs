@@ -2,10 +2,9 @@
 
 namespace EulerLibTests.Problems;
 
-[TestFixture]
 public class Problem0002Fixture
 {
-    [Test]
+    [Fact]
     public void SumEvenFibonacciWithValuesNotExceeding89Is44()
     {
         var sut = new Problem0002();

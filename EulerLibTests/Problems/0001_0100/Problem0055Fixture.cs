@@ -2,14 +2,14 @@
 
 namespace EulerLibTests.Problems;
 
-[TestFixture]
 public class Problem0055Fixture
 {
-    [TestCase(3, false)]
-    [TestCase(47, false)]
-    [TestCase(349,false)]
-    [TestCase(196,true)]
-    [TestCase(4994, true)]
+    [Theory]
+    [InlineData(3, false)]
+    [InlineData(47, false)]
+    [InlineData(349,false)]
+    [InlineData(196,true)]
+    [InlineData(4994, true)]
     public void IsLychrelTests(int n, bool expectedValue)
     {
         var actual = Problem0055.IsLychrel(n);

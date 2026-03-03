@@ -2,23 +2,23 @@
 
 namespace EulerLibTests.Sequences;
 
-[TestFixture]
 public class AbundantNumbersFixture
 {
-    [TestCase(0, 12)]
-    [TestCase(1, 18)]
-    [TestCase(2, 20)]
-    [TestCase(3, 24)]
-    [TestCase(4, 30)]
+    [Theory]
+    [InlineData(0, 12)]
+    [InlineData(1, 18)]
+    [InlineData(2, 20)]
+    [InlineData(3, 24)]
+    [InlineData(4, 30)]
     public void AbundantTestCases(int index, int value)
     {
         var sequence = new AbundantNumbers().GenerateToMaximumSize(index+1).ToList();
 
-        Assert.That(sequence.Count, Is.EqualTo(index+1));
-        Assert.That(sequence[index], Is.EqualTo(value));
+        sequence.Count.Should().Be(index+1);
+        sequence[index].Should().Be(value);
     }
 
-    [Test]
+    [Fact]
     public void AbundantTestCases_UsingGenerateToMaximumValue()
     {
         var sequence = new AbundantNumbers().GenerateToMaximumValue(30);

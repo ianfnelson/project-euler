@@ -2,12 +2,12 @@
 
 namespace EulerLibTests.Problems;
 
-[TestFixture]
 public class Problem0016Fixture
 {
-    [TestCase(3, 2,9)]
-    [TestCase(4,3,10)]
-    [TestCase(2,15,26)]
+    [Theory]
+    [InlineData(3, 2,9)]
+    [InlineData(4,3,10)]
+    [InlineData(2,15,26)]
     public void PowerDigitSumTests(int value, int exponent, int expectedSum)
     {
         var sut = new Problem0016();

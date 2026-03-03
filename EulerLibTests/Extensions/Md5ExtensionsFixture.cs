@@ -2,10 +2,10 @@
 
 namespace EulerLibTests.Extensions;
 
-[TestFixture]
 public class Md5ExtensionsFixture
 {
-    [TestCase("Hello World!", "ed076287532e86365e841e92bfc50d8c")]
+    [Theory]
+    [InlineData("Hello World!", "ed076287532e86365e841e92bfc50d8c")]
     public void ToMd5Hash(string input, string expectedHash)
     {
         var hash = input.ToMd5Hash();
@@ -13,8 +13,9 @@ public class Md5ExtensionsFixture
         hash.Should().Be(expectedHash);
     }
 
-    [TestCase("Hello World!", "ed076287532e86365e841e92bfc50d8c", true)]
-    [TestCase("Hello World!", "ed076287532e86355e841e92bfc50d8c", false)]
+    [Theory]
+    [InlineData("Hello World!", "ed076287532e86365e841e92bfc50d8c", true)]
+    [InlineData("Hello World!", "ed076287532e86355e841e92bfc50d8c", false)]
     public void VerifyMd5Hash(string input, string hash, bool expectedResult)
     {
         var result = input.VerifyMd5Hash(hash);

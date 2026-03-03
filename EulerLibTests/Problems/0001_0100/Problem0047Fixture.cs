@@ -2,14 +2,14 @@
 
 namespace EulerLibTests.Problems
 {
-    [TestFixture]
     public class Problem0047Fixture
     {
-        [TestCase(14, 2)]
-        [TestCase(15, 2)]
-        [TestCase(644, 3)]
-        [TestCase(645, 3)]
-        [TestCase(646, 3)]
+        [Theory]
+        [InlineData(14, 2)]
+        [InlineData(15, 2)]
+        [InlineData(644, 3)]
+        [InlineData(645, 3)]
+        [InlineData(646, 3)]
         public void DistinctPrimeFactorCount(int x, int expectedValue)
         {
             var sut = new Problem0047();
@@ -19,9 +19,10 @@ namespace EulerLibTests.Problems
             actual.Should().Be(expectedValue);
         }
 
-        [TestCase(2, 14)]
-        [TestCase(3, 644)]
-        [TestCase(4, 134043)]
+        [Theory]
+        [InlineData(2, 14)]
+        [InlineData(3, 644)]
+        [InlineData(4, 134043)]
         public void FirstOfNConsecutiveIntegersWithNDistinctPrimeFactors(int n, int expectedValue)
         {
             var sut = new Problem0047();

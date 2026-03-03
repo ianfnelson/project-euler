@@ -2,10 +2,9 @@
 
 namespace EulerLibTests.Problems
 {
-    [TestFixture]
     public class Problem0012Fixture
     {
-        [Test]
+        [Fact]
         public void FirstTriangularNumberToHaveOverFiveDivisorsIs28()
         {
             var sut = new Problem0012();

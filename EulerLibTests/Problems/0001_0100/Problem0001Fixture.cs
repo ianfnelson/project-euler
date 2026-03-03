@@ -3,10 +3,9 @@ using FluentAssertions;
 
 namespace EulerLibTests.Problems;
 
-[TestFixture]
 public class Problem0001Fixture
 {
-    [Test]
+    [Fact]
     public void SumMultiplesOfThreeAndFiveBelowTenIs23()
     {
         var sut = new Problem0001();

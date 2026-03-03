@@ -2,10 +2,9 @@
 
 namespace EulerLibTests.Problems;
 
-[TestFixture]
 public class Problem0006Fixture
 {
-    [Test]
+    [Fact]
     public void SumOfSquaresOfFirst10NaturalsIs385()
     {
         var sut = new Problem0006();
@@ -15,7 +14,7 @@ public class Problem0006Fixture
         result.Should().Be(385);
     }
 
-    [Test]
+    [Fact]
     public void SquareOfSumsOfFirst10NaturalsIs3025()
     {
         var sut = new Problem0006();
@@ -25,7 +24,7 @@ public class Problem0006Fixture
         result.Should().Be(3025);
     }
 
-    [Test]
+    [Fact]
     public void SumSquareDifferenceOfNaturalsUpTo10Is2640()
     {
         var sut = new Problem0006();

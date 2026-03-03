@@ -2,10 +2,9 @@ using EulerLib.Sequences;
 
 namespace EulerLibTests.Sequences;
 
-[TestFixture]
 public class PentagonalNumbersFixture
 {
-    [Test]
+    [Fact]
     public void PentagonalNumbers_GenerateToMaximumSize()
     {
         var sequence = new PentagonalNumbers().GenerateToMaximumSize(10);
@@ -13,7 +12,7 @@ public class PentagonalNumbersFixture
         sequence.Should().BeEquivalentTo([1, 5, 12, 22, 35, 51, 70, 92, 117, 145]);
     }
 
-    [Test]
+    [Fact]
     public void PentagonalNumbers_GenerateToMaximumValue()
     {
         var sequence = new PentagonalNumbers().GenerateToMaximumValue(22);

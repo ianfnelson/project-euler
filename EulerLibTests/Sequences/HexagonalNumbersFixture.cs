@@ -2,10 +2,9 @@ using EulerLib.Sequences;
 
 namespace EulerLibTests.Sequences;
 
-[TestFixture]
 public class HexagonalNumbersFixture
 {
-    [Test]
+    [Fact]
     public void HexagonalNumbers_GenerateToMaximumSize()
     {
         var sequence = new HexagonalNumbers().GenerateToMaximumSize(5);
@@ -13,7 +12,7 @@ public class HexagonalNumbersFixture
         sequence.Should().BeEquivalentTo([1, 6, 15, 28, 45]);
     }
 
-    [Test]
+    [Fact]
     public void HexagonalNumbers_GenerateToMaximumValue()
     {
         var sequence = new HexagonalNumbers().GenerateToMaximumValue(40);
