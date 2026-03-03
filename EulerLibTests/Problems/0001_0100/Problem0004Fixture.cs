@@ -2,12 +2,12 @@
 
 namespace EulerLibTests.Problems;
 
-[TestFixture]
 public class Problem0004Fixture
 {
-    [TestCase(0)]
-    [TestCase(-1)]
-    [TestCase(int.MinValue)]
+    [Theory]
+    [InlineData(0)]
+    [InlineData(-1)]
+    [InlineData(int.MinValue)]
     public void LargestPalindromeMadeFromProductOfTwoIntegersThrowsIfDigitsIsLessThan1(int digits)
     {
         var sut = new Problem0004();
@@ -19,7 +19,7 @@ public class Problem0004Fixture
         ex.ParamName.Should().Be("digits");
     }
 
-    [Test]
+    [Fact]
     public void LargestPalindromeMadeFromProductOfTwoIntegersWithDigits2Is9009()
     {
         var sut = new Problem0004();

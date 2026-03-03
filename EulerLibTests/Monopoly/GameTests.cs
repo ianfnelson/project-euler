@@ -2,11 +2,9 @@ using EulerLib.Monopoly;
 
 namespace EulerLibTests.Monopoly;
 
-[TestFixture]
 public class GameTests
 {
-    [Test]
-    [Ignore("Slow-running")]
+    [Fact(Skip = "Slow-running")]
     public void GameTest_SixSidedDice_TopSquaresAreAsExpected()
     {
         var game = new Game(6);

@@ -2,10 +2,9 @@
 
 namespace EulerLibTests.Extensions;
 
-[TestFixture]
 public class PrimeFactorsExtensionFixture
 {
-    [Test]
+    [Fact]
     public void PrimeFactorsOf1()
     {
         var sequence = 1.PrimeFactors().ToList();
@@ -13,7 +12,7 @@ public class PrimeFactorsExtensionFixture
         sequence.Should().BeEmpty();
     }
 
-    [Test]
+    [Fact]
     public void PrimeFactorsOf12()
     {
         var sequence = 12.PrimeFactors().ToList();
@@ -21,7 +20,7 @@ public class PrimeFactorsExtensionFixture
         sequence.Should().BeEquivalentTo(new[] {2, 2, 3});
     }
 
-    [Test]
+    [Fact]
     public void PrimeFactorsOf13195()
     {
         var sequence = 13195.PrimeFactors().ToList();
@@ -29,7 +28,7 @@ public class PrimeFactorsExtensionFixture
         sequence.Should().BeEquivalentTo(new[] {5, 7, 13, 29});
     }
 
-    [Test]
+    [Fact]
     public void PrimeFactorsOfFirst3500Numbers()
     {
         IEnumerable<long> result = null;

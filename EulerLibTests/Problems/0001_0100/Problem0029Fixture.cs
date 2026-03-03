@@ -2,10 +2,9 @@
 
 namespace EulerLibTests.Problems;
 
-[TestFixture]
 public class Problem0029Fixture
 {
-    [Test]
+    [Fact]
     public void DistinctPowersThrough5Gives15DistinctTerms()
     {
         var count = Problem0029.CountDistinctPowersThrough(5);

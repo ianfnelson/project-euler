@@ -2,10 +2,10 @@ using EulerLib.Problems;
 
 namespace EulerLibTests.Problems;
 
-[TestFixture]
 public class Problem0025Fixture
 {
-    [TestCase(3, 12)]
+    [Theory]
+    [InlineData(3, 12)]
     public void IndexOfFirstFibonacciNumberToContainNDigitsTests(int n, int expectedIndex)
     {
         var sut = new Problem0025();

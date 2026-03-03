@@ -2,10 +2,9 @@
 
 namespace EulerLibTests.Problems;
 
-[TestFixture]
 public class Problem0007Fixture
 {
-    [Test]
+    [Fact]
     public void PrimeInPosition6Is13()
     {
         var sut = new Problem0007();

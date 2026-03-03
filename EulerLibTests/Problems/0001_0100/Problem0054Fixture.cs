@@ -2,10 +2,9 @@
 
 namespace EulerLibTests.Problems;
 
-[TestFixture]
 public class Problem0054Fixture
 {
-    [Test]
+    [Fact]
     public void Player1Wins3HandsInExample()
     {
         var file = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "TestFiles/problem0054example.txt");

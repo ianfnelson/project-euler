@@ -2,15 +2,15 @@
 
 namespace EulerLibTests.Extensions;
 
-[TestFixture]
 public class DivisorsExtensionFixture
 {
-    [TestCase(1, 1, 1)]
-    [TestCase(2, 3, 2)]
-    [TestCase(4, 7, 3)]
-    [TestCase(16, 31, 5)]
-    [TestCase(220, 504, 12)]
-    [TestCase(284, 504, 6)]
+    [Theory]
+    [InlineData(1, 1, 1)]
+    [InlineData(2, 3, 2)]
+    [InlineData(4, 7, 3)]
+    [InlineData(16, 31, 5)]
+    [InlineData(220, 504, 12)]
+    [InlineData(284, 504, 6)]
     public void DivisorsTests(int n, int divisorsSum, int divisorsCount)
     {
         // Arrange
@@ -19,16 +19,17 @@ public class DivisorsExtensionFixture
         var divisors = n.Divisors();
 
         // Assert
-        Assert.That(divisors.Count(), Is.EqualTo(divisorsCount));
-        Assert.That(divisors.Sum(), Is.EqualTo(divisorsSum));
+        divisors.Count().Should().Be(divisorsCount);
+        divisors.Sum().Should().Be(divisorsSum);
     }
 
-    [TestCase(1, 0, 0)]
-    [TestCase(2, 1, 1)]
-    [TestCase(4, 3, 2)]
-    [TestCase(16, 15, 4)]
-    [TestCase(220, 284, 11)]
-    [TestCase(284, 220, 5)]
+    [Theory]
+    [InlineData(1, 0, 0)]
+    [InlineData(2, 1, 1)]
+    [InlineData(4, 3, 2)]
+    [InlineData(16, 15, 4)]
+    [InlineData(220, 284, 11)]
+    [InlineData(284, 220, 5)]
     public void ProperDivisorsTests(int n, int divisorsSum, int divisorsCount)
     {
         // Arrange
@@ -37,11 +38,12 @@ public class DivisorsExtensionFixture
         var divisors = n.ProperDivisors();
 
         // Assert
-        Assert.That(divisors.Count(), Is.EqualTo(divisorsCount));
-        Assert.That(divisors.Sum(), Is.EqualTo(divisorsSum));
+        divisors.Count().Should().Be(divisorsCount);
+        divisors.Sum().Should().Be(divisorsSum);
     }
 
-    [TestCase(4, new[] { 1, 2 })]
+    [Theory]
+    [InlineData(4, new[] { 1, 2 })]
     public void ProperDivisors_ValuesTest(int n, int[] expectedDivisors)
     {
         var divisors = n.ProperDivisors();

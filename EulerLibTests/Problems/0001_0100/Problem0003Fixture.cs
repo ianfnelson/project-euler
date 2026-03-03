@@ -2,10 +2,9 @@
 
 namespace EulerLibTests.Problems;
 
-[TestFixture]
 public class Problem0003Fixture
 {
-    [Test]
+    [Fact]
     public void LargestPrimeFactorOf13195Is29()
     {
         var sut = new Problem0003();

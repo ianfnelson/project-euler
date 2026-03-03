@@ -2,11 +2,11 @@
 
 namespace EulerLibTests.Problems
 {
-    [TestFixture]
     public class Problem0015Fixture
     {
-        [TestCase(2,6)]
-        [TestCase(3, 20)]
+        [Theory]
+        [InlineData(2,6)]
+        [InlineData(3, 20)]
         public void PathsThroughGridWithSideLength(int sideLength, long expectedPaths)
         {
             var sut = new Problem0015();

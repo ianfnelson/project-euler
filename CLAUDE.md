@@ -9,7 +9,7 @@ dotnet test EulerLibTests/EulerLibTests.csproj
 ## Structure
 - **Euler/** - Console runner app (net8.0)
 - **EulerLib/** - Problem solutions library. Each problem implements `IProblem` (`Id`, `Title`, `Solve()`, `Md5OfSolution`)
-- **EulerLibTests/** - Test project (NUnit + FluentAssertions + AutoFixture)
+- **EulerLibTests/** - Test project (xUnit + FluentAssertions + AutoFixture)
 
 ## Conventions
 - Problems go in `EulerLib/Problems/0001_0100/Problem0001.cs` (namespace `EulerLib.Problems`)

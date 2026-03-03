@@ -2,13 +2,13 @@
 
 namespace EulerLibTests.Extensions;
 
-[TestFixture]
 public class IntegerExtensionsFixture
 {
-    [TestCase(2, "2")]
-    [TestCase(3, "6")]
-    [TestCase(4, "24")]
-    [TestCase(5, "120")]
+    [Theory]
+    [InlineData(2, "2")]
+    [InlineData(3, "6")]
+    [InlineData(4, "24")]
+    [InlineData(5, "120")]
     public void FactorialTests(int n, string expectedFactorial)
     {
         var result = n.Factorial();
@@ -16,7 +16,7 @@ public class IntegerExtensionsFixture
         result.ToString().Should().Be(expectedFactorial);
     }
 
-    [Test]
+    [Fact]
     public void DigitRotationsTest2845()
     {
         var result = 2845.DigitRotations().ToList();
@@ -24,7 +24,7 @@ public class IntegerExtensionsFixture
         result.Should().BeEquivalentTo([2845, 8452, 4528, 5284]);
     }
 
-    [Test]
+    [Fact]
     public void DigitRotationsTest197()
     {
         var result = 197.DigitRotations().ToList();
@@ -32,7 +32,7 @@ public class IntegerExtensionsFixture
         result.Should().BeEquivalentTo([197, 971, 719]);
     }
         
-    [Test]
+    [Fact]
     public void DigitRotationsTest111()
     {
         var result = 111.DigitRotations().ToList();

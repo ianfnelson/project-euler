@@ -2,46 +2,48 @@
 
 namespace EulerLibTests.Sequences;
 
-[TestFixture]
 public class PrimeNumbersFixture
 {
-    [TestCase(0, 2)]
-    [TestCase(1, 3)]
-    [TestCase(2, 5)]
-    [TestCase(3, 7)]
-    [TestCase(4, 11)]
+    [Theory]
+    [InlineData(0, 2)]
+    [InlineData(1, 3)]
+    [InlineData(2, 5)]
+    [InlineData(3, 7)]
+    [InlineData(4, 11)]
     public void PrimesTestCases(int index, int value)
     {
         var sequence = new PrimeNumbers().GenerateToMaximumSize(5);
 
-        Assert.That(sequence.ElementAt(index), Is.EqualTo(value));
+        sequence.ElementAt(index).Should().Be(value);
     }
 
-    [TestCase(50, 47)]
-    [TestCase(40, 37)]
-    [TestCase(30, 29)]
-    [TestCase(19, 19)]
+    [Theory]
+    [InlineData(50, 47)]
+    [InlineData(40, 37)]
+    [InlineData(30, 29)]
+    [InlineData(19, 19)]
     public void GenerateToMaximumValueTests(int maximumValue, int lastPrime)
     {
         var sequence = new PrimeNumbers().GenerateToMaximumValue(maximumValue).ToList();
 
-        Assert.That(sequence.Last(), Is.EqualTo(lastPrime));
+        sequence.Last().Should().Be(lastPrime);
     }
 
-    [TestCase(5, 11)]
-    [TestCase(10, 29)]
-    [TestCase(15, 47)]
-    [TestCase(20, 71)]
-    [TestCase(100, 541)]
-    [TestCase(20000,224737)]
+    [Theory]
+    [InlineData(5, 11)]
+    [InlineData(10, 29)]
+    [InlineData(15, 47)]
+    [InlineData(20, 71)]
+    [InlineData(100, 541)]
+    [InlineData(20000,224737)]
     public void GenerateToMaximumSizeTests(int maximumSize, int lastPrime)
     {
         var sequence = new PrimeNumbers().GenerateToMaximumSize(maximumSize).ToList();
 
-        Assert.That(sequence.Last(), Is.EqualTo(lastPrime));
+        sequence.Last().Should().Be(lastPrime);
     }
 
-    [Test]
+    [Fact]
     public void GenerateUsingEratosthenesSieveTest1()
     {
         var sequence = new PrimeNumbers().GenerateUsingEratosthenesSieve(20).ToList();
@@ -49,7 +51,7 @@ public class PrimeNumbersFixture
         sequence.Should().BeEquivalentTo(new[] { 2, 3, 5, 7, 11, 13, 17, 19 });
     }
 
-    [Test]
+    [Fact]
     public void GenerateUsingEratosthenesSieveTest2()
     {
         var sequence = new PrimeNumbers().GenerateUsingEratosthenesSieve(30).ToList();

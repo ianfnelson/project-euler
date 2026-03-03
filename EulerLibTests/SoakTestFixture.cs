@@ -4,10 +4,9 @@ using EulerLib.Extensions;
 
 namespace EulerLibTests;
 
-[TestFixture]
 public class SoakTestFixture
 {
-    [Test]
+    [Fact]
     public void RunAllSolvedProblems()
     {
         // Get All Problems
@@ -33,9 +32,9 @@ public class SoakTestFixture
             }
         }
 
-        if (failures.Count != 0)
-        {
-            Assert.Fail(string.Join(Environment.NewLine, failures));
-        }
+        failures.Should().BeEmpty(
+            because: failures.Count > 0
+                ? string.Join(Environment.NewLine, failures)
+                : string.Empty);
     }
 }

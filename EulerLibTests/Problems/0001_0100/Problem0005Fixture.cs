@@ -2,10 +2,9 @@
 
 namespace EulerLibTests.Problems;
 
-[TestFixture]
 public class Problem0005Fixture
 {
-    [Test]
+    [Fact]
     public void SmallestIntegerEvenlyDivisibleByNumbersFrom1To10Is2520()
     {
         var sut = new Problem0005();
