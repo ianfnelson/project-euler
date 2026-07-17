@@ -16,12 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    # DELIBERATELY INSECURE - added only to validate GitHub CodeQL scanning.
-    # CodeQL: actions/code-injection - untrusted PR title interpolated into a
-    # shell run block (CWE-94). Do not merge.
-    - name: Log PR title
-      run: |
-        echo "Building PR: ${{ github.event.pull_request.title }}"
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
